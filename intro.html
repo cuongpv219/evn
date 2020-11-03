@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>EVNFC</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="lib/semantic-ui/responsive-semantic-ui.css">
+  <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+    rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/typography.css" />
+</head>
+
+<body>
+
+  <div id="front-wrapper">
+    <div id="front-header">
+      <div class="ui grid">
+        <div class="computer only row">
+          <div class="ui container">
+            <div class="ui grid front-menu">
+              <div class="five wide column">
+                <a href="#">
+                  <img class="logo" src="images/logo.png">
+                </a>
+              </div>
+              <div class="eleven wide column">
+                <div class="top-menu">
+                  <a href="#" class="menu-item font-14 text-bold text-uppercase active">Giới thiệu</a>
+                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Hỗ trợ</a>
+                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
+                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
+                  <div class=" menu-item ui icon input">
+                    <input class="prompt" type="text" placeholder="">
+                    <i class="search icon"></i>
+                  </div>
+                  <div class="results"></div>
+                </div>
+                <div class="bottom-menu">
+                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Sản phẩm</a>
+                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tablet mobile only row">
+          <div class="column">
+            <div class="ui menu">
+              <a href="#" class="item">
+                <img class="logo" src="images/logo.png">
+              </a>
+              <div class="right menu">
+                <a id="mobile_item" class="item"><i class="bars icon"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pushable">
+        <div class="ui sidebar vertical menu">
+          <a class="item">Giới thiệu</a>
+          <a class="item">Hỗ trợ</a>
+          <a class="item">Liên hệ</a>
+          <a class="item">Đăng nhập</a>
+        </div>
+      </div>
+    </div>
+    <div id="fullpage">
+      <div class="section" id="section0">
+        <div class="ui container">
+          <div class="content">
+            <p class="text-22 text-white mb-0">
+              Chào mừng bạn đến với
+              <img class='lg1' src="images/lg1.png" />
+            </p>
+            <hr />
+            <h1 class="text-60 text-bold text-white mt-0 mb-20">Giải pháp tài chính toàn diện cho Điện mặt trời mái nhà
+            </h1>
+            <button class="button-primary">
+              Đăng kí vay
+            </button>
+
+
+          </div>
+          <div class="navigation-container">
+            <div class="navigation">
+              <div class="nav-item text-20 text-bold computer tablet only">Sample 1</div>
+              <div class="nav-item text-20 text-bold active computer tablet only">Sample 2</div>
+              <div class="nav-item text-20 text-bold">Giải pháp</div>
+              <div class="nav-item text-20 text-bold">Lợi ích</div>
+              <div class="nav-item text-20 text-bold">Thủ tục</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section1">
+        <div class="ui container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="ui grid">
+                  <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
+                    <div class="text-20 p1 text-white">Easy Solar</div>
+                    <div class="text-36 p2 text-white">Giải pháp tài chính toàn diện</div>
+                    <div class="text-20 p3">Giới thiệu</div>
+                  </div>
+                  <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
+                    <img class="slide-img" src="./images/slide-1.png">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ui grid">
+                  <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
+                    <div class="text-20 p1 text-white">Easy Solar</div>
+                    <div class="text-36 p2 text-white">Giải pháp tài chính toàn diện</div>
+                    <div class="text-20 p3">Giới thiệu</div>
+                  </div>
+                  <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
+                    <img class="slide-img" src="./images/slide-1.png">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ui grid">
+                  <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
+                    <div class="text-20 p1 text-white">Easy Solar</div>
+                    <div class="text-36 p2 text-white">Giải pháp tài chính toàn diện</div>
+                    <div class="text-20 p3">Giới thiệu</div>
+                  </div>
+                  <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
+                    <img class="slide-img" src="./images/slide-1.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-control">
+              <div class="ui grid">
+                <div class="five wide computer six wide tablet sixteen wide mobile column buttons">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="section" id="section2">
+        <div class="ui container">
+          <div class="text-16 text-white">Lý do</div>
+          <div class=" text-40 text-white mb-40">
+            Lựa chọn
+            <img class='lg2' src="images/lg2.png" />
+          </div>
+          <div class="ui grid content-box">
+            <div class="five wide computer six wide tablet sixteen wide mobile column content">
+              <div class="text-20 text-bold text-white mb-20">
+                Easy Solar
+              </div>
+              <div class="text-14 text-white mb-20 text-justify">Easy Solar là gói sản phẩm được thiết kế chuyên biệt
+                dành riêng cho
+                các khách hàng có nhu cầu đầu tư trong lĩnh vực điện mặt trời áp mái mang lại nhiều lợi ích cho khách
+                hàng.</div>
+              <div class="text-14 text-white mb-20 text-justify">Cơ chế Một cửa – Một chính sách – Một chất lượng nhằm
+                mang tới cho
+                khách hàng giải pháp vay với thủ tục đơn giản, chính sách giá tối ưu và chất lượng sản phẩm được đảm bảo
+                bởi sự đồng hành trong dài hạn của EVNFinance và các nhà cung cấp uy tín</div>
+            </div>
+            <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
+              <div class="blocks ui grid">
+                <div class="block eight wide column">
+                  <div class="text-15 text-white">
+                    <div class="circle"></div>
+                    Hạn mức lên đến
+                  </div>
+                  <div class="text-60 text-white">500 triệu</div>
+                </div>
+                <div class="block eight wide column mt-30">
+                  <div class="text-15 text-white">
+                    <div class="circle"></div>
+                    Hạn mức lên đến
+                  </div>
+                  <div class="text-60 text-white ">500 triệu</div>
+                </div>
+                <div class="block eight wide column">
+                  <div class="text-15 text-white">
+                    <div class="circle"></div>
+                    Hạn mức lên đến
+                  </div>
+                  <div class="text-60 text-white ">500 triệu</div>
+                </div>
+                <div class="block eight wide column mt-30">
+                  <div class="text-15 text-white">
+                    <div class="circle"></div>
+                    Hạn mức lên đến
+                  </div>
+                  <div class="text-60 text-white">500 triệu</div>
+                </div>
+              </div>
+
+              <div class="partners">
+                <div class="font-18 font-bold text-white mb-20">
+                  Các đối tác uy tín
+                </div>
+                <div class="partners-swiper-container swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/p1.png" />
+                    </div>
+
+                  </div>
+                  <div class="swiper-button-prev partners-button-prev"></div>
+                  <div class="swiper-button-next partners-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section3">
+        <div class="ui container">
+          <div class="text-16">Các bước</div>
+          <div class=" text-40 text-red mb-40">
+            Vay gói
+            <img class='lg2' src="images/lg2.png" />
+          </div>
+          <div class="s3-steps ui stackable equal width grid">
+            <div class="s3-step column">
+              <div class="title">
+                <div class="text-white text-60 p1">01</div>
+                <div class="text-white text-20 text-bold p2">Trải nghiệm</div>
+              </div>
+              <div class="overlay">
+                <div class="text-60 text-white mt-40 step-order">01</div>
+                <div class="step-content">
+                  <div class="text-20 text-bold text-white mt-40">Trải nghiệm</div>
+                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
+                    đăng ký</div>
+                </div>
+              </div>
+            </div>
+            <div class="s3-step column">
+              <div class="title">
+                <div class="text-white text-60 p1">01</div>
+                <div class="text-white text-20 text-bold p2">Trải nghiệm</div>
+              </div>
+              <div class="overlay">
+                <div class="text-60 text-white mt-40 step-order">01</div>
+                <div class="step-content">
+                  <div class="text-20 text-bold text-white mt-40">Trải nghiệm</div>
+                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
+                    đăng ký</div>
+                </div>
+              </div>
+            </div>
+            <div class="s3-step column">
+              <div class="title">
+                <div class="text-white text-60 p1">01</div>
+                <div class="text-white text-20 text-bold p2">Trải nghiệm</div>
+              </div>
+              <div class="overlay">
+                <div class="text-60 text-white mt-40 step-order">01</div>
+                <div class="step-content">
+                  <div class="text-20 text-bold text-white mt-40">Trải nghiệm</div>
+                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
+                    đăng ký</div>
+                </div>
+              </div>
+            </div>
+            <div class="s3-step column">
+              <div class="title">
+                <div class="text-white text-60 p1">01</div>
+                <div class="text-white text-20 text-bold p2">Trải nghiệm</div>
+              </div>
+              <div class="overlay">
+                <div class="text-60 text-white mt-40 step-order">01</div>
+                <div class="step-content">
+                  <div class="text-20 text-bold text-white mt-40">Trải nghiệm</div>
+                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
+                    đăng ký</div>
+                </div>
+              </div>
+            </div>
+            <div class="s3-step column">
+              <div class="title">
+                <div class="text-white text-60 p1">01</div>
+                <div class="text-white text-20 text-bold p2">Trải nghiệm</div>
+              </div>
+              <div class="overlay">
+                <div class="text-60 text-white mt-40 step-order">01</div>
+                <div class="step-content">
+                  <div class="text-20 text-bold text-white mt-40">Trải nghiệm</div>
+                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
+                    đăng ký</div>
+                </div>
+              </div>
+            </div>
+            <div class="s3-step column">
+              <div class="title">
+                <div class="text-white text-60 p1">01</div>
+                <div class="text-white text-20 text-bold p2">Trải nghiệm</div>
+              </div>
+              <div class="overlay">
+                <div class="text-60 text-white mt-40 step-order">01</div>
+                <div class="step-content">
+                  <div class="text-20 text-bold text-white mt-40">Trải nghiệm</div>
+                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
+                    đăng ký</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section4">
+        <div class="ui container">
+          <div class="text-16">Để lại thông tin</div>
+          <div class=" text-40 text-red mb-0">
+            Đăng ký <strong>Gói vay</strong>
+            <img class='lg2' src="images/lg2.png" />
+          </div>
+          <div class="ui grid">
+            <div class="six wide computer six wide tablet sixteen wide mobile column content">
+              <img src="images/image-6.png" />
+            </div>
+            <div class="ten wide computer ten wide tablet sixteen wide mobile column">
+              <form class="ui form">
+                <div class="field">
+                  <div class="two fields">
+                    <div class="field">
+                      <label>Họ và tên</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Năm sinh</label>
+                      <input type="text">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="three fields">
+                    <div class="field">
+                      <label>Số CMND/CCCD</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Điện thoại</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Email</label>
+                      <input type="text">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label>Bạn công tác tại</label>
+                  <select class="ui fluid dropdown">
+                    <option value="">State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <div class="two fields">
+                    <div class="field">
+                      <label>Phòng ban</label>
+                      <input type="text" placeholder=>
+                    </div>
+                    <div class="field">
+                      <label>Vị trí/ Chức danh</label>
+                      <input type="text">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="two fields">
+                    <div class="field">
+                      <label>Hợp đồng lao động</label>
+                      <select class="ui fluid dropdown">
+                        <option value="">State</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label>Thu nhập trung bình/ tháng</label>
+                      <input type="text">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label>Địa chỉ thường trú</label>
+                  <input type="text">
+                </div>
+                <div class="field">
+                  <label>Địa chỉ lắp đặt</label>
+                  <input type="text">
+                </div>
+
+                <div class="inline field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>Tôi đã đọc và đồng ý với các điều kiện và điều khoản</label>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="two fields">
+                    <div class="field">
+
+                    </div>
+                    <div class="field">
+                      <button class="button-primary">
+                        Gửi yêu cầu vay
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section5">
+        <div class="footer-container">
+          <div class="ui container">
+            <a href="#">
+              <img class="footer-logo mb-40 mt-40" src="images/logo.png">
+            </a>
+            <div class="ui equal width grid stackable">
+              <div class="column">
+                <div class="text-20 text-bold text-blue mb-20">Công ty Tài chính Cổ phần Điện lực</div>
+                <div class="text-14 text-bold text-blue">Tầng 14,15 & 16 Tháp B, tòa nhà EVN</div>
+                <div class="text-14  text-blue">11 Cửa Bắc, P. Trúc Bạch, Q. Ba Đình, TP. Hà Nội</div>
+                <div class="text-14  text-blue">Điện thoại: (84-24) 2222.9999</div>
+                <div class="text-14  text-blue">Fax: (84-24) 2222.1999</div>
+                <div class="text-14  text-blue mt-40">Giấy phép số 90/GP-TTĐT cấp ngày 29/08/2008</div>
+
+              </div>
+              <div class="column">
+                <div class="text-20 text-bold text-blue mb-20">Chi nhánh Thành phố Đà Nẵng</div>
+                <div class="text-14  text-blue">Lô A2.12, Đường 30 tháng 4, P. Hoà Cường Bắc, Q. Hải Châu, TP. Đà Nẵng
+                </div>
+                <div class="text-14  text-blue">Điện thoại: (84-236) 222.3456</div>
+                <div class="text-14  text-blue">Fax: (84-236) 222.22409</div>
+
+              </div>
+              <div class="column">
+                <div class="text-20 text-bold text-blue mb-20">Chi nhánh Thành phố Hồ Chí Minh</div>
+                <div class="text-14  text-blue">Lô H (ii) và I (i), Tầng 9, Tòa nhà Sunwah Tower, 115 Đại lộ Nguyễn Huệ,
+                  P. Bến Nghé, Q. 1, TP. HCM
+                </div>
+                <div class="text-14  text-blue">Điện thoại: (84-28) 2222.9999</div>
+                <div class="text-14  text-blue">Fax: (84-28) 2222.8999</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+    <script
+      src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="lib/fullpage/script.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script type="text/javascript">
+    </script>
+
+</body>
+
+</html>
