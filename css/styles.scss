@@ -466,6 +466,98 @@ $color-3: #1D4994;
   }
 }
 
+#front-content {
+  margin-top: -120px;
+}
+
+#cover-intro {
+  background-image: url('../images/bg-7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+#front-tabs {
+  text-align: right;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+
+  .tabs-container {
+    background: $color-1;
+    border-radius: 10px;
+    padding: 15px 0px;
+    display: inline;
+
+    .item {
+      border-left: 1px solid #FFF;
+      padding: 0 30px;
+
+      &:first-child {
+        border-left: 0;
+      }
+    }
+  }
+}
+
+.section-img-finance {
+  width: 255px;
+  vertical-align: -12px;
+  margin-left: 5px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.section-img-solar {
+  width: 255px;
+  vertical-align: -33px;
+  margin-left: -29px;
+
+  img {
+    width: 100%;
+  }
+}
+
+#section-2 {
+  padding-bottom: 100px;
+
+  .subtitle {
+    max-width: 600px;
+    margin: 0px auto 20px;
+  }
+}
+
+.item-card {
+  text-align: center;
+  padding: 0px 50px !important;
+
+  &>div {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(151, 151, 151, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+  }
+
+  img {
+    width: 75px;
+
+  }
+
+  .title {
+    margin-top: 20px;
+  }
+
+  .desc {
+    margin-top: 20px;
+  }
+}
+
 @media only screen and (max-width: 992px) {}
 
 @media only screen and (max-width: 768px) {

@@ -480,6 +480,106 @@
   width: 250px;
 }
 
+#front-content {
+  margin-top: -120px;
+}
+
+#cover-intro {
+  background-image: url("../images/bg-7.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#front-tabs {
+  text-align: right;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+#front-tabs .tabs-container {
+  background: #F6BB3B;
+  border-radius: 10px;
+  padding: 15px 0px;
+  display: inline;
+}
+
+#front-tabs .tabs-container .item {
+  border-left: 1px solid #FFF;
+  padding: 0 30px;
+}
+
+#front-tabs .tabs-container .item:first-child {
+  border-left: 0;
+}
+
+.section-img-finance {
+  width: 255px;
+  vertical-align: -12px;
+  margin-left: 5px;
+}
+
+.section-img-finance img {
+  width: 100%;
+}
+
+.section-img-solar {
+  width: 255px;
+  vertical-align: -33px;
+  margin-left: -29px;
+}
+
+.section-img-solar img {
+  width: 100%;
+}
+
+#section-2 {
+  padding-bottom: 100px;
+}
+
+#section-2 .subtitle {
+  max-width: 600px;
+  margin: 0px auto 20px;
+}
+
+.item-card {
+  text-align: center;
+  padding: 0px 50px !important;
+}
+
+.item-card > div {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 20px rgba(151, 151, 151, 0.3);
+          box-shadow: 0px 0px 20px rgba(151, 151, 151, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+}
+
+.item-card img {
+  width: 75px;
+}
+
+.item-card .title {
+  margin-top: 20px;
+}
+
+.item-card .desc {
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 768px) {
   #front-header {
     position: fixed;
