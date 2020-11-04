@@ -557,6 +557,7 @@
 .item-card {
   text-align: center;
   padding: 0px 50px !important;
+  margin-bottom: 30px;
 }
 
 .item-card > div {
@@ -578,6 +579,16 @@
 
 .item-card .desc {
   margin-top: 20px;
+}
+
+.no-border .item-card > div {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.no-border .item-card:hover > div {
+  -webkit-box-shadow: 0px 0px 20px rgba(151, 151, 151, 0.3);
+          box-shadow: 0px 0px 20px rgba(151, 151, 151, 0.3);
 }
 
 @media only screen and (max-width: 768px) {
@@ -717,6 +728,15 @@
     vertical-align: -17px;
     margin-left: -18px;
     margin-top: -10px;
+  }
+  #front-content {
+    margin-top: 0;
+  }
+  #cover-intro {
+    height: 300px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
