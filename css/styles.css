@@ -1080,6 +1080,26 @@ input[type=number] {
   display: none;
 }
 
+.interest-rate {
+    text-align: center; 
+    margin: 25px 0px;   
+}
+.interest-rate h2 {
+    color: #B42E2E;
+    font-size: 30px;
+    line-height: 28px;
+    margin: 14px 0px;
+  }
+  .interest-rate  h4{
+    font-size: 14px;
+  }
+  .interest-rate div{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .interest-rate div span {
+    color: #B42E2E
+  }
 @media only screen and (min-width: 992px) {
   #front-header {
     height: 120px;

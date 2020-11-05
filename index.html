@@ -433,7 +433,7 @@
                         <option value=""></option>
                         <option value="1">Ngành điện</option>
                         <option value="2">Ngoài ngành điện</option>
-                        <option value="3">Khách</option>
+                        <option value="3">Khác</option>
                       </select>
                       <div class="field-error"></div>
                     </div>
@@ -664,7 +664,7 @@
         var add = addressHtmlElement.val();
         if (!add) {
           isValid = false;
-          addressHtmlElement.parent().find('.field-error').html('Vui lòng nhập Đại chỉ thường trú!');
+          addressHtmlElement.parent().find('.field-error').html('Vui lòng nhập Địa chỉ thường trú!');
         }
 
         //installation_address
@@ -708,7 +708,8 @@
               "position": str[7].value
             }
           }
-          var accessURL = "https://online.evnfc.vn/api/auth/signupV2";
+          var accessURL = "https://evnfc-be.twendeesoft.com/api/auth/signupV2";
+          // var accessURL = "https://online.evnfc.vn/api/auth/signupV2";
           $.ajax({
             type: "POST",
             url: accessURL,
@@ -716,6 +717,7 @@
             dataType: "application/json",
             contentType: "application/json; charset=utf-8",
             success: function (response) {
+              console.log('response => ', response)
               if (response.type == "error") {
                 output =
                   '<div class="alert-danger" style="padding:10px 15px; margin-bottom:30px;">' +
@@ -768,7 +770,7 @@
               $(".contact-form input").val("");
               $(".contact-form textarea").val("");
               $(".contact_btn i").addClass("d-none");
-              var x = '<div class="alert-danger-2" style="padding:10px 15px; color: #fff; font-weight: 400; margin-bottom:30px; background-color: #930000 !important">Có lỗi xảy ra, vui lòng thử lại sau.</div>';
+              var x = `<div class="alert-danger-2" style="padding:10px 15px; color: #fff; font-weight: 400; margin-bottom:30px; background-color: #930000 !important">${JSON.parse(response.responseText).message}</div>`;
               // x.className = "show";
               $("#result").hide().html(x).slideDown();
               $(".contact_btn i").addClass("d-none");
