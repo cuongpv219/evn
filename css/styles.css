@@ -1120,16 +1120,6 @@ input[type=number] {
 
 }
 
-input:checked:focus~label:before,
-.ui.checkbox input:checked~label:before {
-  background-color: #F6BB3B;
-  border-color: #F6BB3B;
-}
-
-.ui.checkbox input:checked~label:after {
-  color: #fff;
-}
-
 @media only screen and (min-width: 992px) {
   #front-header {
     height: 120px;
