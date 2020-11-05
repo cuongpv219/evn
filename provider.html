@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <title>EVNFC</title>
+  <title>EVNFC Solar</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,14 +26,14 @@
           <div class="ui container">
             <div class="ui grid front-menu">
               <div class="five wide column">
-                <a href="#">
+                <a href="index.html">
                   <img class="logo" src="images/logo.png">
                 </a>
               </div>
               <div class="eleven wide column">
                 <div class="top-menu">
-                  <a href="#" class="menu-item font-14 text-bold text-uppercase active">Giới thiệu</a>
-                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Hỗ trợ</a>
+                  <a href="intro.html" class="menu-item font-14 text-bold text-uppercase">Giới thiệu</a>
+                  <a href="support.html" class="menu-item font-14 text-bold text-uppercase">Hỗ trợ</a>
                   <a href="#" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
                   <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
                   <div class=" menu-item ui icon input">
@@ -44,8 +44,9 @@
                 </div>
                 <div class="bottom-menu">
                   <a href="product.html" class="menu-item font-14 text-bold text-uppercase">Sản phẩm</a>
-                  <a href="provider.html" class="menu-item font-14 text-bold text-uppercase">Nhà cung cấp</a>
-                  <a href="support.html" class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
+                  <a href="provider.html" class="menu-item font-14 text-bold text-uppercase active">Nhà cung cấp</a>
+                  <a href="https://solar.evn.com.vn/#/calculator" class="menu-item font-14 text-bold text-uppercase">Tư
+                    vấn - trải nghiệm
                   </a>
                 </div>
               </div>
@@ -69,10 +70,17 @@
 
       <div class="pushable">
         <div class="ui sidebar other-sidebar vertical menu">
-          <a class="item">Giới thiệu</a>
-          <a class="item">Hỗ trợ</a>
-          <a class="item">Liên hệ</a>
-          <a class="item">Đăng nhập</a>
+          <div class="ui sidebar index-sidebar vertical menu">
+            <a href="intro.html" class="item font-14 text-bold text-uppercase">Giới thiệu</a>
+            <a href="support.html" class="item font-14 text-bold text-uppercase">Hỗ trợ</a>
+            <a href="#" class="item font-14 text-bold text-uppercase">Liên hệ</a>
+            <a href="#" class="item font-14 text-bold text-uppercase">Đăng nhập</a>
+            <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm</a>
+            <a href="provider.html" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+            <a href="https://solar.evn.com.vn/#/calculator" class="item font-14 text-bold text-uppercase">Tư vấn
+              - trải nghiệm
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -132,54 +140,175 @@
             </div>
           </form>
 
-          <table id="front-table" class="ui single line stackable table">
-            <thead>
-              <tr>
-                <th class="text-20">STT</th>
-                <th class="text-20">Tên thiết bị</th>
-                <th class="text-20">ĐVT</th>
-                <th class="text-20">Công suất</th>
-                <th class="text-20">Giá</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>01</td>
-                <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
-                <td>Tấm</td>
-                <td>2-3</td>
-                <td>10000</td>
-              </tr>
-              <tr>
-                <td>02</td>
-                <td>Inverter Growatt - 1 pha</td>
-                <td>Tấm</td>
-                <td>2-3</td>
-                <td>10000</td>
-              </tr>
-              <tr class="active">
-                <td>03</td>
-                <td>Hệ thống giám sát và phân tích dữ liệu hệ thống năng lượng sạch tích hợp.</td>
-                <td>Tấm</td>
-                <td>2-3</td>
-                <td>10000</td>
-              </tr>
-              <tr>
-                <td>04</td>
-                <td>Tủ điện tiêu chuẩn hòa lưới EVN</td>
-                <td>Tấm</td>
-                <td>2-3</td>
-                <td>10000</td>
-              </tr>
-              <tr>
-                <td>05</td>
-                <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
-                <td>Tấm</td>
-                <td>2-3</td>
-                <td>10000</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="front-table-box">
+            <table id="front-table" class="ui single line stackable table">
+              <thead>
+                <tr>
+                  <th class="text-20">STT</th>
+                  <th class="text-20">Tên thiết bị</th>
+                  <th class="text-20">ĐVT</th>
+                  <th class="text-20">Công suất</th>
+                  <th class="text-20">Giá</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Inverter Growatt - 1 pha</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr class="active">
+                  <td>03</td>
+                  <td>Hệ thống giám sát và phân tích dữ liệu hệ thống năng lượng sạch tích hợp.</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td>Tủ điện tiêu chuẩn hòa lưới EVN</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Tấm quang điện Mono Hafcell Longi 445 wp</td>
+                  <td>Tấm</td>
+                  <td>2-3</td>
+                  <td>10000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
@@ -189,8 +318,8 @@
             Chức năng – Nhiệm vụ của Nhà cung cấp
           </div>
 
-          <div class="ui stackable grid list-item no-border">
-            <div class="three column row">
+          <div class="ui stackable grid list-item">
+            <div class="three column row mb-20">
               <div class="column item-card">
                 <div>
                   <img src=" images/icon-18.png" />
@@ -259,47 +388,22 @@
             <div class="partners-swiper-container swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="images/p2.png" />
+                  <img src="images/lg3.png" />
                 </div>
                 <div class="swiper-slide">
                   <img src="images/p2.png" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="images/p2.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/p2.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/p2.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/p2.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/p2.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/p2.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/p2.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/p2.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/p2.png" />
+                  <img src="images/lg3.png" />
                 </div>
 
               </div>
-              <div class="swiper-button-prev partners-button-prev">
-                <img class="btn-swiper" src='images/arrow-left.png' />
-              </div>
-              <div class="swiper-button-next partners-button-next">
-                <img class="btn-swiper" src='images/arrow-right.png' />
-
-              </div>
+            </div>
+            <div class="swiper-button-prev partners-button-prev">
+              <img class="btn-swiper" src='images/arrow-left.png' />
+            </div>
+            <div class="swiper-button-next partners-button-next">
+              <img class="btn-swiper" src='images/arrow-right.png' />
             </div>
           </div>
         </div>
