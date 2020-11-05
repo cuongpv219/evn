@@ -394,109 +394,129 @@
               <img src="images/image-6.png" />
             </div>
             <div class="ten wide computer ten wide tablet sixteen wide mobile column">
-              <form class="ui form">
+              <form id="register-form" name="registerForm" class="ui form" onsubmit="return validateForm()" method="post" >
+                <div id="result"></div>
                 <div class="field">
                   <div class="two fields">
-                    <div class="field">
+                    <div class="field required">
                       <label>Họ và tên</label>
-                      <input type="text">
+                      <input type="text" name="name">
+                      <div class="field-error"></div>
                     </div>
-                    <div class="field">
+                    <div class="field required">
                       <label>Năm sinh</label>
-                      <input type="text">
+                      <input type="number" name="yob">
+                      <div class="field-error"></div>
                     </div>
                   </div>
                 </div>
 
                 <div class="field">
                   <div class="three fields">
-                    <div class="field">
+                    <div class="field required">
                       <label>Số CMND/CCCD</label>
-                      <input type="text">
+                      <input name="card_number" type="text">
+                      <div class="field-error"></div>
                     </div>
-                    <div class="field">
+                    <div class="field required">
                       <label>Điện thoại</label>
-                      <input type="text">
+                      <input type="text" name="phone_number">
+                      <div class="field-error"></div>
                     </div>
-                    <div class="field">
+                    <div class="field required">
                       <label>Email</label>
-                      <input type="text">
+                      <input type="text" name="email">
+                      <div class="field-error"></div>
                     </div>
                   </div>
                 </div>
 
                 <div class="field">
-                  <label>Bạn công tác tại</label>
-                  <select class="ui fluid dropdown">
-                    <option value="">State</option>
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="AR">Arkansas</option>
-                  </select>
+                  <div class="two fields">
+                    <div class="field required">
+                      <label>Bạn đang công tác tại</label>
+                      <select id="working-place" class="ui fluid dropdown">
+                        <option value=""></option>
+                        <option value="1">Ngành điện</option>
+                        <option value="2">Ngoài ngành điện</option>
+                        <option value="3">Khách</option>
+                      </select>
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="field non-required">
+                      <label>Đơn vị công tác</label>
+                      <input type="text" name="department">
+                    </div>
+                  </div>
                 </div>
 
-                <div class="field">
+                <div class="field non-required">
                   <div class="two fields">
                     <div class="field">
                       <label>Phòng ban</label>
-                      <input type="text" placeholder=>
+                      <input type="text" name="office" value="">
+                      <div class="field-error"></div>
                     </div>
                     <div class="field">
                       <label>Vị trí/ Chức danh</label>
-                      <input type="text">
+                      <input type="text" name="position">
                     </div>
                   </div>
                 </div>
 
                 <div class="field">
                   <div class="two fields">
-                    <div class="field">
+                    <div class="field non-required">
                       <label>Hợp đồng lao động</label>
-                      <select class="ui fluid dropdown">
-                        <option value="">State</option>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
+                      <select id="contract_duration_type" class="ui fluid dropdown">
+                        <option value=""></option>
+                        <option value="1">1 năm</option>
+                        <option value="2">2 năm</option>
+                        <option value="3">3 năm</option>
+                        <option value="4">Không giới hạn</option>
+                        <option value="5">Khác</option>
                       </select>
                     </div>
-                    <div class="field">
+                    <div class="field required">
                       <label>Thu nhập trung bình/ tháng</label>
-                      <input type="text">
+                      <input type="text" name="income">
+                      <div class="field-error"></div>
                     </div>
                   </div>
                 </div>
 
-                <div class="field">
+                <div class="field required">
                   <label>Địa chỉ thường trú</label>
-                  <input type="text">
+                  <input type="text" name="address">
+                  <div class="field-error"></div>
                 </div>
-                <div class="field">
+                <div class="field required">
                   <label>Địa chỉ lắp đặt</label>
-                  <input type="text">
+                  <input type="text" name="installation_address">
+                  <div class="field-error"></div>
                 </div>
 
                 <div class="inline field">
                   <div class="ui checkbox">
                     <input type="checkbox" tabindex="0" class="hidden">
+                    <div class="field-error"></div>
                     <label>Tôi đã đọc và đồng ý với các điều kiện và điều khoản</label>
                   </div>
                 </div>
 
-                <div class="field">
+                <!-- <div class="field">
                   <div class="two fields">
                     <div class="field">
-                      <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                      <div class="g-recaptcha" data-sitekey="6Le7kNoZAAAAAMkS_r_MA34xVvTlbBWLVdkK7Ezz"></div>
                       <br />
-                    </div>
-                    <div class="field">
+                    </div> -->
+                    <div class="field" style="display: flex; justify-content: center;">
                       <button class="button-primary">
                         Gửi yêu cầu vay
                       </button>
                     </div>
-                  </div>
-                </div>
+                  <!-- </div>
+                </div> -->
 
               </form>
 
@@ -584,7 +604,190 @@
         },
       })
     </script>
+  <script>
+    function validateForm(formElement, formName) {
+      $(formElement).find('.field-error').hide();
+      // $('#working-place').find('.non-required').hide();
+      var isValid = true;
+      if (formName === 'registerForm') {
+        //name
+        var nameHtmlElement = $(formElement).find('[name="name"]');
+        var name = nameHtmlElement.val();
+        if (!name) {
+          isValid = false;
+          nameHtmlElement.parent().find('.field-error').html('Vui lòng nhập Họ và tên!');
+        }
 
+        //year
+        var yearHtmlElement = $(formElement).find('[name="yob"]');
+        var year = yearHtmlElement.val();
+        if (!year) {
+          isValid = false;
+          yearHtmlElement.parent().find('.field-error').html('Vui lòng nhập Năm sinh!');
+        }
+
+        //cmnd
+        var cardHtmlElement = $(formElement).find('[name="card_number"]');
+        var card = cardHtmlElement.val();
+        if (!card) {
+          isValid = false;
+          cardHtmlElement.parent().find('.field-error').html('Vui lòng nhập Số CMND/CCCD!');
+        }
+
+        //phone
+        var phoneHtmlElement = $(formElement).find('[name="phone_number"]');
+        var phone = phoneHtmlElement.val();
+        if (!phone) {
+          isValid = false;
+          phoneHtmlElement.parent().find('.field-error').html('Vui lòng nhập Số điện thoại!');
+        }
+
+        //email
+        var emailHtmlElement = $(formElement).find('[name="email"]');
+        var email = emailHtmlElement.val();
+        if (!email) {
+          isValid = false;
+          emailHtmlElement.parent().find('.field-error').html('Vui lòng nhập Email!');
+        }
+
+        //working place
+        var workingPlaceHtmlElement = $('#working-place');
+        if (!workingPlaceHtmlElement[0].value) {
+          isValid = false;
+          workingPlaceHtmlElement.parent().find('.field-error').html('Vui lòng chọn Nơi làm việc của bạn!');
+        }
+
+        //income
+        var incomeHtmlElement = $(formElement).find('[name="income"]');
+        var income = incomeHtmlElement.val();
+        if (!income) {
+          isValid = false;
+          incomeHtmlElement.parent().find('.field-error').html('Vui lòng nhập Thu nhập trung bình/tháng!');
+        }
+
+        //address
+        var addressHtmlElement = $(formElement).find('[name="address"]');
+        var add = addressHtmlElement.val();
+        if (!add) {
+          isValid = false;
+          addressHtmlElement.parent().find('.field-error').html('Vui lòng nhập Đại chỉ thường trú!');
+        }
+
+        //installation_address
+        var installationAddressHtmlElement = $(formElement).find('[name="installation_address"]');
+        var installAdd = installationAddressHtmlElement.val();
+        if (!installAdd) {
+          isValid = false;
+          installationAddressHtmlElement.parent().find('.field-error').html('Vui lòng nhập Đại chỉ lắp đặt!');
+        }
+      }
+      if (!isValid) {
+          $('.field-error').show();
+      }
+      return isValid;
+    }
+    function resetFormValue(formElement){
+        formElement.find('input').val('');
+        formElement.find('select').val('');
+    }
+    $('#register-form').on('submit', function(e){
+        e.preventDefault();
+        var checkValidate = validateForm(this, 'registerForm');
+        if(checkValidate){
+          var str = $("#register-form").serializeArray();
+          var body = {
+            "address": str[9].value,
+            "installation_address": str[10].value,
+            "personal_information": {
+              "birthday": str[1].value+'-01-01',
+              "card_number": str[2].value,
+              "email": str[4].value,
+              "name": str[0].value,
+              "phone_number": str[3].value
+            },
+            "working_information": {
+              "contract_duration_type": $('#contract_duration_type')[0].value,
+              "career_type": $('#working-place')[0].value,
+              "department": str[5].value,
+              "income": str[8].value,
+              "office": str[6].value,
+              "position": str[7].value
+            }
+          }
+          var accessURL = "https://online.evnfc.vn/api/auth/signupV2";
+          $.ajax({
+            type: "POST",
+            url: accessURL,
+            data: JSON.stringify(body),
+            dataType: "application/json",
+            contentType: "application/json; charset=utf-8",
+            success: function (response) {
+              if (response.type == "error") {
+                output =
+                  '<div class="alert-danger" style="padding:10px 15px; margin-bottom:30px;">' +
+                  response.text +
+                  "</div>";
+              } else {
+                output =
+                  '<div class="alert-success" style="padding:10px 15px; margin-bottom:30px;">' +
+                  response.text +
+                  "</div>";
+                //reset values in all input fields
+                $(".contact-form input").val("");
+                $(".contact-form textarea").val("");
+                var x = '<div class="alert-danger-2" style="padding:10px 15px;  margin-bottom:30px; font-weight: 400; background-color: #4CAF50 !important">Gửi yêu cầu vay thành công!</div>';
+                // x.className = "show";
+                $("#result").hide().html(x).slideDown();
+                $(".contact_btn i").addClass("d-none");
+                $(".alert-danger").addClass("display-none");
+                $(".texxt-danger").addClass("display-none");
+                setTimeout(function () {
+                  $(".alert-danger-2").addClass("display-none");
+                }, 5000);
+              }
+
+              if ($("#result").length) {
+                // alert("yes");
+                $("#result").hide().html(output).slideDown();
+                $(".contact_btn i").addClass("d-none");
+              } else {
+                if (response.type == "error") {
+                  Swal.fire({
+                    type: "error",
+                    icon: "error",
+                    title: "Oops...",
+                    html: '<div class="text-danger">' + response.text + "</div>",
+                  });
+                  $(".contact_btn i").addClass("d-none");
+                } else {
+                  Swal.fire({
+                    type: "success",
+                    icon: "success",
+                    title: "Success!",
+                    html: '<div class="text-success">' + response.text + "</div>",
+                  });
+                  $(".contact_btn i").addClass("d-none");
+                }
+              }
+            },
+            error: function (response) {
+              $(".contact-form input").val("");
+              $(".contact-form textarea").val("");
+              $(".contact_btn i").addClass("d-none");
+              var x = '<div class="alert-danger-2" style="padding:10px 15px; color: #fff; font-weight: 400; margin-bottom:30px; background-color: #930000 !important">Có lỗi xảy ra, vui lòng thử lại sau.</div>';
+              // x.className = "show";
+              $("#result").hide().html(x).slideDown();
+              $(".contact_btn i").addClass("d-none");
+              $(".alert-danger").addClass("display-none");
+              $(".texxt-danger").addClass("display-none");
+              setTimeout(function () {
+                $(".alert-danger-2").addClass("display-none");
+              }, 5000);
+            },
+          });
+        }
+    });
+  </script>
 </body>
 
 </html>

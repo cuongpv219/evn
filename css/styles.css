@@ -35,6 +35,11 @@ button a:hover {
   padding: 10px 40px;
 }
 
+.button-primary:focus{
+  border: none;
+  outline: none;
+}
+
 #content {
   min-height: 100px;
 }
@@ -1041,6 +1046,38 @@ button a:hover {
 
 .ui.menu a.item:hover {
   color: #000 !important;
+}
+
+/* register form */
+.field-error {
+  color: #930000;
+  margin-top: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.required label::after {
+  content: "*";
+  color: #930000;
+  margin-left: 5px;
+}
+
+.ui.form .fields .field:last-child {
+  padding: 0px
+}
+
+.display-none, .d-none {
+  display: none;
 }
 
 @media only screen and (min-width: 992px) {
