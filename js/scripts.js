@@ -17,8 +17,13 @@ $(document).ready(function () {
     }
   });
 
-  $('.ui.sidebar').sidebar({
+  $('.other-sidebar').sidebar({
     context: $('#front-content'),
+    transition: 'overlay'
+  }).sidebar('attach events', '#mobile_item');
+
+  $('.index-sidebar').sidebar({
+    context: $('#fullpage'),
     transition: 'overlay'
   }).sidebar('attach events', '#mobile_item');
 

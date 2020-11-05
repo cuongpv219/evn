@@ -8,7 +8,7 @@
   src: url("../fonts/Lato-Regular.ttf");
 }
 
-a:hover {
+button a:hover {
   color: #FFF !important;
 }
 
@@ -49,7 +49,7 @@ a:hover {
 
 .fp-tableCell {
   vertical-align: top !important;
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 #section0 {
@@ -70,6 +70,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 #front-header .logo {
@@ -260,6 +261,11 @@ a:hover {
 #section1 .swiper-container .slide-control .swiper-button-prev:after {
   font-size: 20px;
   color: #FFF;
+  content: none;
+}
+
+#section1 .swiper-container .slide-control .swiper-pagination-bullet-active {
+  background: #B42E2E !important;
 }
 
 #section1 .swiper-container .slide-control .buttons {
@@ -322,8 +328,8 @@ a:hover {
   z-index: -1;
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -5px;
+  left: -30px;
 }
 
 .partners {
@@ -370,6 +376,13 @@ a:hover {
   width: 100%;
 }
 
+#section2 .swiper-button-prev,
+#section2 .swiper-container-rtl .swiper-button-next,
+#section2 .swiper-button-next,
+#section2 .swiper-container-rtl .swiper-button-prev {
+  background: transparent;
+}
+
 #provider-section-2 .partners {
   background: transparent;
 }
@@ -401,6 +414,10 @@ a:hover {
   vertical-align: -28px;
   margin-left: -30px;
   margin-top: -20px;
+}
+
+#front-wrapper {
+  position: relative;
 }
 
 #front-wrapper .s3-steps {
@@ -508,6 +525,11 @@ a:hover {
   border-radius: 0;
   padding-left: 0px;
   margin-top: -10px;
+  font-size: 16px !important;
+}
+
+#section4 label {
+  font-size: 16px;
 }
 
 #section5 {
@@ -960,7 +982,7 @@ a:hover {
     margin-top: -10px;
   }
   #front-content {
-    margin-top: 60px;
+    margin-top: 0px;
   }
   #cover-intro {
     height: 300px;
@@ -1013,6 +1035,14 @@ a:hover {
   }
 }
 
+.ui.left.sidebar {
+  top: 60px !important;
+}
+
+.ui.menu a.item:hover {
+  color: #000 !important;
+}
+
 @media only screen and (min-width: 992px) {
   #front-header {
     height: 120px;
@@ -1020,9 +1050,11 @@ a:hover {
   #front-header .menu-item.ui.input {
     display: none;
   }
-  #section1 .swiper-container {
-    height: 500px;
-    margin-top: 60px;
+  #section1 .swiper-container .column .slide-img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 100%;
+    width: auto !important;
   }
 }
 

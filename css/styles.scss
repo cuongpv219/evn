@@ -14,7 +14,7 @@ $color-3: #1D4994;
     /* TTF file for CSS3 browsers  */
 }
 
-a:hover {
+button a:hover {
   color: #FFF !important;
 }
 
@@ -51,7 +51,7 @@ a:hover {
 
 .fp-tableCell {
   vertical-align: top !important;
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 #section0 {
@@ -78,6 +78,7 @@ a:hover {
 
   .front-menu {
     align-items: center;
+    width: 100%;
   }
 
   .logo {
@@ -136,6 +137,8 @@ a:hover {
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background: #DDDDDD !important;
+  // height: 12px !important;
+  // width: 12px !important;
 }
 
 #fp-nav ul li a.active span,
@@ -143,6 +146,8 @@ a:hover {
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span {
   background: $color-2 !important;
+  // height: 20px !important;
+  // width: 20px !important;
 }
 
 #section0 {
@@ -255,6 +260,11 @@ a:hover {
       .swiper-button-prev:after {
         font-size: 20px;
         color: #FFF;
+        content: none;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: $color-2 !important;
       }
 
       .buttons {
@@ -322,8 +332,8 @@ a:hover {
         z-index: -1;
         border-radius: 50%;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -5px;
+        left: -30px;
       }
     }
   }
@@ -357,6 +367,7 @@ a:hover {
     opacity: 1;
   }
 
+
   .swiper-button-next,
   .swiper-container-rtl .swiper-button-prev {
     right: 0px !important;
@@ -372,6 +383,20 @@ a:hover {
       width: 100%;
     }
   }
+}
+
+#section2 {
+
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next,
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    background: transparent;
+  }
+
+  // img {
+  //   width: 100%;
+  // }
 }
 
 #provider-section-2 {
@@ -408,6 +433,19 @@ a:hover {
     margin-top: -20px;
   }
 }
+
+#front-wrapper {
+  position: relative;
+}
+
+// #front-index-content {
+// position: absolute;
+// top: 60px;
+// left: 0;
+// right: 0;
+// z-index: 999;
+// bottom: 0;
+// }
 
 #front-wrapper .s3-steps {
   background: $color-1;
@@ -496,6 +534,11 @@ a:hover {
     border-radius: 0;
     padding-left: 0px;
     margin-top: -10px;
+    font-size: 16px !important;
+  }
+
+  label {
+    font-size: 16px;
   }
 }
 
@@ -970,7 +1013,7 @@ a:hover {
   }
 
   #front-content {
-    margin-top: 60px;
+    margin-top: 0px;
   }
 
   #cover-intro {
@@ -1030,6 +1073,14 @@ a:hover {
   }
 }
 
+.ui.left.sidebar {
+  top: 60px !important;
+}
+
+.ui.menu a.item:hover {
+  color: #000 !important;
+}
+
 @media only screen and (max-width: 340px) {}
 
 @media only screen and (min-width: 768px) {}
@@ -1043,12 +1094,14 @@ a:hover {
     }
   }
 
-  #section1 {
-    .swiper-container {
-      height: 500px;
-      margin-top: 60px;
-    }
+  #section1 .swiper-container .column {
+    // height: 670px;
 
+    .slide-img {
+      object-fit: contain;
+      height: 100%;
+      width: auto !important;
+    }
   }
 
 }

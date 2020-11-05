@@ -16,68 +16,70 @@
   <link rel="stylesheet" type="text/css" href="lib/fullpage/style.css" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link rel="stylesheet" type="text/css" href="css/typography.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
 
   <div id="front-wrapper">
-    <div id="front-header">
-      <div class="ui grid">
-        <div class="computer only row">
-          <div class="ui container">
-            <div class="ui grid front-menu">
-              <div class="five wide column">
-                <a href="#">
-                  <img class="logo" src="images/logo.png">
-                </a>
-              </div>
-              <div class="eleven wide column">
-                <div class="top-menu">
-                  <a href="#" class="menu-item font-14 text-bold text-uppercase active">Giới thiệu</a>
-                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Hỗ trợ</a>
-                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
-                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
-                  <div class=" menu-item ui icon input">
-                    <input class="prompt" type="text" placeholder="">
-                    <i class="search icon"></i>
-                  </div>
-                  <div class="results"></div>
-                </div>
-                <div class="bottom-menu">
-                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Sản phẩm</a>
-                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Nhà cung cấp</a>
-                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="tablet mobile only row">
-          <div class="column">
-            <div class="ui menu">
-              <a href="#" class="item">
-                <img class="logo" src="images/logo.png">
-              </a>
-              <div class="right menu">
-                <a id="mobile_item" class="item"><i class="bars icon"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pushable">
-        <div class="ui sidebar vertical menu">
-          <a class="item">Giới thiệu</a>
-          <a class="item">Hỗ trợ</a>
-          <a class="item">Liên hệ</a>
-          <a class="item">Đăng nhập</a>
-        </div>
-      </div>
-    </div>
+    <div id="front-index-content"></div>
     <div id="fullpage">
       <div class="section" id="section0">
+        <div id="front-header">
+          <div class="ui grid">
+            <div class="computer only row">
+              <div class="ui container">
+                <div class="ui grid front-menu">
+                  <div class="five wide column">
+                    <a href="#">
+                      <img class="logo" src="images/logo.png">
+                    </a>
+                  </div>
+                  <div class="eleven wide column">
+                    <div class="top-menu">
+                      <a href="#" class="menu-item font-14 text-bold text-uppercase active">Giới thiệu</a>
+                      <a href="#" class="menu-item font-14 text-bold text-uppercase">Hỗ trợ</a>
+                      <a href="#" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
+                      <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
+                      <div class=" menu-item ui icon input">
+                        <input class="prompt" type="text" placeholder="">
+                        <i class="search icon"></i>
+                      </div>
+                      <div class="results"></div>
+                    </div>
+                    <div class="bottom-menu">
+                      <a href="#" class="menu-item font-14 text-bold text-uppercase">Sản phẩm</a>
+                      <a href="#" class="menu-item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+                      <a href="#" class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="tablet mobile only row">
+              <div class="column">
+                <div class="ui menu">
+                  <a href="#" class="item">
+                    <img class="logo" src="images/logo.png">
+                  </a>
+                  <div class="right menu">
+                    <a id="mobile_item" class="item"><i class="bars icon"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pushable">
+            <div class="ui sidebar index-sidebar vertical menu">
+              <a class="item">Giới thiệu</a>
+              <a class="item">Hỗ trợ</a>
+              <a class="item">Liên hệ</a>
+              <a class="item">Đăng nhập</a>
+            </div>
+          </div>
+        </div>
         <div class="ui container">
           <div class="content">
             <p class="text-22 text-white mb-0">
@@ -95,9 +97,9 @@
           </div>
           <div class="navigation-container">
             <div class="navigation">
-              <div class="nav-item text-20 text-bold computer tablet only">Sample 1</div>
-              <div class="nav-item text-20 text-bold active computer tablet only">Sample 2</div>
-              <div class="nav-item text-20 text-bold">Giải pháp</div>
+              <!-- <div class="nav-item text-20 text-bold computer tablet only">Sample 1</div> -->
+              <!-- <div class="nav-item text-20 text-bold active computer tablet only">Sample 2</div> -->
+              <div class="nav-item text-20 text-bold active">Giải pháp</div>
               <div class="nav-item text-20 text-bold">Lợi ích</div>
               <div class="nav-item text-20 text-bold">Thủ tục</div>
             </div>
@@ -149,9 +151,9 @@
             <div class="slide-control">
               <div class="ui grid">
                 <div class="five wide computer six wide tablet sixteen wide mobile column buttons">
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"> <img src="images/arrow-left-w.png"></div>
+                  <div class="swiper-pagination"> </div>
+                  <div class="swiper-button-next"><img src="images/arrow-right-w.png"></div>
                 </div>
                 <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
                 </div>
@@ -195,23 +197,23 @@
                 <div class="block eight wide column mt-30">
                   <div class="text-15 text-white">
                     <div class="circle"></div>
-                    Hạn mức lên đến
+                    Thủ tục
                   </div>
-                  <div class="text-60 text-white ">500 triệu</div>
+                  <div class="text-60 text-white ">Đơn giản</div>
                 </div>
                 <div class="block eight wide column">
                   <div class="text-15 text-white">
                     <div class="circle"></div>
-                    Hạn mức lên đến
+                    Giá trị vay dự án tối đa
                   </div>
-                  <div class="text-60 text-white ">500 triệu</div>
+                  <div class="text-60 text-white ">85%</div>
                 </div>
                 <div class="block eight wide column mt-30">
                   <div class="text-15 text-white">
                     <div class="circle"></div>
-                    Hạn mức lên đến
+                    Chất lượng
                   </div>
-                  <div class="text-60 text-white">500 triệu</div>
+                  <div class="text-60 text-white">Đảm bảo</div>
                 </div>
               </div>
 
@@ -256,8 +258,12 @@
                     </div>
 
                   </div>
-                  <div class="swiper-button-prev partners-button-prev"></div>
-                  <div class="swiper-button-next partners-button-next"></div>
+                  <div class="swiper-button-prev partners-button-prev">
+                    <img src="images/arrow-left-w.png">
+                  </div>
+                  <div class="swiper-button-next partners-button-next">
+                    <img src="images/arrow-right-w.png">
+                  </div>
                 </div>
               </div>
             </div>
@@ -480,7 +486,8 @@
                 <div class="field">
                   <div class="two fields">
                     <div class="field">
-
+                      <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                      <br />
                     </div>
                     <div class="field">
                       <button class="button-primary">
