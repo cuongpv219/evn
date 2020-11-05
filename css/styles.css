@@ -35,6 +35,11 @@ button a:hover {
   padding: 10px 40px;
 }
 
+.button-primary:focus{
+  border: none;
+  outline: none;
+}
+
 #content {
   min-height: 100px;
 }
@@ -1112,6 +1117,78 @@ button a:hover {
 
 .ui.menu a.item:hover {
   color: #000 !important;
+}
+
+/* register form */
+.field-error {
+  color: #930000;
+  margin-top: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.required label::after {
+  content: "*";
+  color: #930000;
+  margin-left: 5px;
+}
+
+.ui.form .fields .field:last-child {
+  padding: 0px
+}
+
+.display-none, .d-none {
+  display: none;
+}
+
+.interest-rate {
+    text-align: center; 
+    margin: 25px 0px;   
+}
+.interest-rate h2 {
+    color: #B42E2E;
+    font-size: 30px;
+    line-height: 28px;
+    margin: 14px 0px;
+  }
+  .interest-rate  h4{
+    font-size: 14px;
+  }
+  .interest-rate div{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .interest-rate div span {
+    color: #B42E2E
+  }
+
+.back-to-top {
+  height: 60px;
+  background-color: #1D4994;
+}
+.back-to-top > a {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1127px;
+  margin: auto;
+}
+.back-to-top img{
+  width: 20px;
+  margin-left: 5px;
+
 }
 
 @media only screen and (min-width: 992px) {
