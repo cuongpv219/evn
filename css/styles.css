@@ -1100,6 +1100,36 @@ input[type=number] {
   .interest-rate div span {
     color: #B42E2E
   }
+
+.back-to-top {
+  height: 60px;
+  background-color: #1D4994;
+}
+.back-to-top > a {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1127px;
+  margin: auto;
+}
+.back-to-top img{
+  width: 20px;
+  margin-left: 5px;
+
+}
+
+input:checked:focus~label:before,
+.ui.checkbox input:checked~label:before {
+  background-color: #F6BB3B;
+  border-color: #F6BB3B;
+}
+
+.ui.checkbox input:checked~label:after {
+  color: #fff;
+}
+
 @media only screen and (min-width: 992px) {
   #front-header {
     height: 120px;
