@@ -520,13 +520,12 @@
                 </div>
 
                 <div class="inline field">
-                  <div class="ui checkbox">
+                  <div class="ui checkbox" style="display: flex">
                     <input onchange="handleChangeCheckbox()" type="checkbox" tabindex="0" class="hidden ischeck">
-                    <label>Tôi đã đọc và đồng ý với các điều kiện và điều khoản</label>
+                    <label>Tôi đã đọc và đồng ý với các</label> <span id="myBtn" style="color: blue; padding-left: 5px; cursor: pointer">điều kiện và điều khoản</span>
                     <div class="field-error"></div>
                   </div>
                 </div>
-
                 <!-- <div class="field">
                   <div class="two fields">
                     <div class="field">
@@ -544,6 +543,16 @@
               </form>
 
             </div>
+          </div>
+        </div>
+        
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Điều kiện và điều khoản</h3>
+              <span class="close">&times;</span>
+            </div>
+            <p>Bằng việc sử dụng hoặc duyệt trang web này ("Trang web") hay bất kỳ trang web nào khác ("Trang web của EVNFinance") của EVNFinance, bạn xác nhận rằng mình đã đọc, hiểu và đồng ý chịu sự ràng buộc của các Điều khoản và điều kiện này cũng như tất cả các điều luật và quy định hiện hành. Nếu không đồng ý bị ràng buộc bởi các Điều khoản và điều kiện này thì bạn không được sử dụng Trang web này. Chúng tôi có thể thay đổi các Điều khoản và điều kiện này bất kỳ lúc nào mà không cần thông báo cho bạn. Vì vậy, bạn nên truy cập định kỳ vào trang này để xem lại các Điều khoản và điều kiện này. Bằng việc sử dụng Trang web này sau khi chúng tôi đăng bất kỳ thay đổi nào, bạn đồng ý chấp nhận những thay đổi đó, cho dù thực tế bạn đã xem xét những thay đổi đó hay chưa.</p>
           </div>
         </div>
       </div>
@@ -770,6 +779,13 @@
       function handleChangeIncome(value){
         var newValue = value.split(',').join('')
         $('#register-form').find('[name="income"]').parent().find('.field-error').hide();
+        var regExp = /^\,|\d$/;
+        if(regExp.test(newValue)){
+
+        } else {
+          $('#register-form').find('[name="income"]').parent().find('.field-error').html("Thu nhập trung bình/tháng sai định dạng!");
+          $('#register-form').find('[name="income"]').parent().find('.field-error').show();
+        }
         if(newValue) {
           document.getElementById("in-come").value = newValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
         }
@@ -777,7 +793,7 @@
           return $('#register-form').find('[name="income"]').parent().find('.field-error').hide();
         }
         if (newValue.length > 255) {
-          $('#register-form').find('[name="income"]').parent().find('.field-error').html("Đơn vị công tác vượt quá 255 ký tự!");
+          $('#register-form').find('[name="income"]').parent().find('.field-error').html("Thu nhập trung bình/tháng vượt quá 255 ký tự!");
           $('#register-form').find('[name="income"]').parent().find('.field-error').show();
         }
       }
@@ -1042,6 +1058,34 @@
         }
       });
     </script>
+    <!-- modal -->
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
 </body>
 
 </html>
