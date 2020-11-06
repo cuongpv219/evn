@@ -454,7 +454,7 @@
                   <div class="two fields">
                     <div class="field">
                       <label>Bạn đang công tác tại</label>
-                      <select id="working-place" class="ui fluid dropdown">
+                      <select id="working-place" class="ui fluid dropdown" onchange="handleChangeWorkingPlace(this.value)">
                         <option value=""></option>
                         <option value="1">Ngành điện</option>
                         <option value="2">Ngoài ngành điện</option>
@@ -467,6 +467,7 @@
                       <input type="text" name="department" onkeyup="handleChangeDepartment(this.value)">
                       <div class="field-error"></div>
                     </div>
+                    
                   </div>
                 </div>
 
@@ -478,9 +479,9 @@
                       <div class="field-error"></div>
                     </div>
                     <div class="field">
-                      <label>Vị trí/ Chức danh</label>
-                      <input type="text" name="position" onkeyup="handleChangePosition(this.value)">
-                      <div class="field-error"></div>
+                        <label>Vị trí/ Chức danh</label>
+                        <input type="text" name="position" onkeyup="handleChangePosition(this.value)">
+                        <div class="field-error"></div>
                     </div>
                   </div>
                 </div>
@@ -500,9 +501,10 @@
                     </div>
                     <div class="field">
                       <label>Thu nhập trung bình/ tháng</label>
-                      <input type="number" name="income" onkeyup="handleChangeIncome(this.value)">
+                      <input id="in-come" type="text" name="income" onkeyup="handleChangeIncome(this.value)">
                       <div class="field-error"></div>
                     </div>
+                    
                   </div>
                 </div>
 
@@ -645,6 +647,7 @@
       })
     </script>
     <script>
+      $('#register-form').find('.non-required').find('input').prop("disabled", true)
       function handleChangeName(value) {
         $('#register-form').find('[name="name"]').parent().find('.field-error').hide();
         if (value && value.trim() === '') {
@@ -665,17 +668,17 @@
       function handleChangeYOB(value) {
         $('#register-form').find('[name="yob"]').parent().find('.field-error').hide();
         if (!value) {
-          return $('.field-error').hide();
+          return $('#register-form').find('[name="yob"]').parent().find('.field-error').hide();
         }
         if (value.startsWith('1') || value.startsWith('2')) {
           $('.field-error').hide();
         } else {
           $('#register-form').find('[name="yob"]').parent().find('.field-error').html("Năm sinh sai định dạng!");
-          $('.field-error').show();
+          $('#register-form').find('[name="yob"]').parent().find('.field-error').show();
         }
         if (value.length > 4) {
           $('#register-form').find('[name="yob"]').parent().find('.field-error').html("Năm sinh sai định dạng!");
-          $('.field-error').show();
+          $('#register-form').find('[name="yob"]').parent().find('.field-error').show();
         }
       }
 
@@ -683,7 +686,7 @@
         $('#register-form').find('[name="card_number"]').parent().find('.field-error').hide();
         if (value && value.trim() === '') {
           $('#register-form').find('[name="card_number"]').parent().find('.field-error').html("Vui lòng nhập Số CMND/CCCD/Hộ chiếu!");
-          $('.field-error').show();
+          $('#register-form').find('[name="card_number"]').parent().find('.field-error').show();
         }
         var regExp = /^[A-Za-z0-9]*$/;
         var char = /^[A-Za-z]*$/;
@@ -691,19 +694,19 @@
         if (!char.test(value.charAt(0))) {
           if (!int.test(value)) {
             $('#register-form').find('[name="card_number"]').parent().find('.field-error').html("Số CMND/CCCD/Hộ chiếu sai định dạng");
-            $('.field-error').show();
+            $('#register-form').find('[name="card_number"]').parent().find('.field-error').show();
           }
         } else {
           if (!int.test(value.substring(1))) {
             if (!int.test(value)) {
               $('#register-form').find('[name="card_number"]').parent().find('.field-error').html("Số CMND/CCCD/Hộ chiếu sai định dạng");
-              $('.field-error').show();
+              $('#register-form').find('[name="card_number"]').parent().find('.field-error').show();
             }
           }
         }
         if (value.length > 12) {
           $('#register-form').find('[name="card_number"]').parent().find('.field-error').html("Số CMND/CCCD/Hộ chiếu không được lớn hơn 12 ký tự");
-          $('.field-error').show();
+          $('#register-form').find('[name="card_number"]').parent().find('.field-error').show();
         }
       }
 
@@ -711,27 +714,27 @@
         $('#register-form').find('[name="phone_number"]').parent().find('.field-error').hide();
         if (value && value.trim() === '') {
           $('#register-form').find('[name="phone_number"]').parent().find('.field-error').html("Vui lòng nhập Số điện thoại!");
-          $('.field-error').show();
+          $('#register-form').find('[name="phone_number"]').parent().find('.field-error').show();
         }
         var regExp = /^[0-9]*$/;
         if (value.startsWith('0') && value.length !== 10) {
           $('#register-form').find('[name="phone_number"]').parent().find('.field-error').html("Số điện thoại không đúng định dạng");
-          $('.field-error').show();
+          $('#register-form').find('[name="phone_number"]').parent().find('.field-error').show();
         }
         if (value.startsWith('84') && value.length !== 11) {
           $('#register-form').find('[name="phone_number"]').parent().find('.field-error').html("Số điện thoại không đúng định dạng");
-          $('.field-error').show();
+          $('#register-form').find('[name="phone_number"]').parent().find('.field-error').show();
         }
         if (!(value.startsWith('0') || value.startsWith('84'))) {
           $('#register-form').find('[name="phone_number"]').parent().find('.field-error').html("Số điện thoại không đúng định dạng");
-          $('.field-error').show();
+          $('#register-form').find('[name="phone_number"]').parent().find('.field-error').show();
         }
         var phoneHeader = ['86', '96', '97', '98', '32', '33', '34', '35', '36', '37', '38', '39', '88', '91', '94', '93', '84', '85', '81', '82',
           '89', '90', '93', '70', '79', '77', '76', '78', '92', '56', '58', '99', '59']
         if (value.startsWith('0') && !phoneHeader.includes(value.substring(1, 3))
           || value.startsWith('84') && !phoneHeader.includes(value.substring(2, 4))) {
           $('#register-form').find('[name="phone_number"]').parent().find('.field-error').html("Số điện thoại không tồn tại");
-          $('.field-error').show();
+          $('#register-form').find('[name="phone_number"]').parent().find('.field-error').show();
         }
       }
 
@@ -750,75 +753,98 @@
               listCheck[1].endsWith("."))
           ) {
             $('#register-form').find('[name="email"]').parent().find('.field-error').html("Email không đúng định dạng!");
-            $('.field-error').show();
+            $('#register-form').find('[name="email"]').parent().find('.field-error').show();
           }
           if (value.length > 255) {
             $('#register-form').find('[name="email"]').parent().find('.field-error').html("Email vượt quá 255 ký tự!");
-            $('.field-error').show();
+            $('#register-form').find('[name="email"]').parent().find('.field-error').show();
           }
           if (validation.test(value)) {
-            return $('.field-error').hide();
+            return $('#register-form').find('[name="email"]').parent().find('.field-error').hide();
           }
           $('#register-form').find('[name="email"]').parent().find('.field-error').html("Email không đúng định dạng!");
-          $('.field-error').show();
+          $('#register-form').find('[name="email"]').parent().find('.field-error').show();
+        }
+      }
+
+      function handleChangeIncome(value){
+        var newValue = value.split(',').join('')
+        $('#register-form').find('[name="income"]').parent().find('.field-error').hide();
+        if(newValue) {
+          document.getElementById("in-come").value = newValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+        }
+        if (!newValue) {
+          return $('#register-form').find('[name="income"]').parent().find('.field-error').hide();
+        }
+        if (newValue.length > 255) {
+          $('#register-form').find('[name="income"]').parent().find('.field-error').html("Đơn vị công tác vượt quá 255 ký tự!");
+          $('#register-form').find('[name="income"]').parent().find('.field-error').show();
         }
       }
 
       function handleChangeDepartment(value) {
         $('#register-form').find('[name="department"]').parent().find('.field-error').hide();
         if (!value) {
-          return $('.field-error').hide();
+          return $('#register-form').find('[name="department"]').parent().find('.field-error').hide();
         }
         if (value.length > 255) {
           $('#register-form').find('[name="department"]').parent().find('.field-error').html("Đơn vị công tác vượt quá 255 ký tự!");
-          $('.field-error').show();
+          $('#register-form').find('[name="department"]').parent().find('.field-error').show();
         }
       }
 
       function handleChangePosition(value) {
         $('#register-form').find('[name="position"]').parent().find('.field-error').hide();
         if (!value) {
-          return $('.field-error').hide();
+          return $('#register-form').find('[name="position"]').parent().find('.field-error').hide();
         }
         if (value.length > 255) {
           $('#register-form').find('[name="position"]').parent().find('.field-error').html("Vị trí/chức danh vượt quá 255 ký tự!");
-          $('.field-error').show();
+          $('#register-form').find('[name="position"]').parent().find('.field-error').show();
         }
       }
       function handleChangeOffice(value) {
         $('#register-form').find('[name="office"]').parent().find('.field-error').hide();
         if (!value) {
-          return $('.field-error').hide();
+          return $('#register-form').find('[name="office"]').parent().find('.field-error').hide();
         }
         if (value.length > 255) {
           $('#register-form').find('[name="office"]').parent().find('.field-error').html("Phòng ban vượt quá 255 ký tự!");
-          $('.field-error').show();
+          $('#register-form').find('[name="office"]').parent().find('.field-error').show();
         }
       }
       function handleChangeAddress(value) {
         $('#register-form').find('[name="address"]').parent().find('.field-error').hide();
         if (!value) {
-          return $('.field-error').hide();
+          return $('#register-form').find('[name="address"]').parent().find('.field-error').hide();
         }
         if (value.length > 255) {
           $('#register-form').find('[name="address"]').parent().find('.field-error').html("Phòng ban vượt quá 255 ký tự!");
-          $('.field-error').show();
+          $('#register-form').find('[name="address"]').parent().find('.field-error').show();
         }
       }
       function handleChangeInstallAdd(value) {
         $('#register-form').find('[name="installation_address"]').parent().find('.field-error').hide();
         if (!value) {
-          return $('.field-error').hide();
+          return $('#register-form').find('[name="installation_address"]').parent().find('.field-error').hide();
         }
         if (value.length > 255) {
           $('#register-form').find('[name="installation_address"]').parent().find('.field-error').html("Phòng ban vượt quá 255 ký tự!");
-          $('.field-error').show();
+          $('#register-form').find('[name="installation_address"]').parent().find('.field-error').show();
         }
       }
 
       function handleChangeCheckbox() {
         if ($('.ischeck').is(':checked')) {
           return $('.ischeck').parent().find('.field-error').hide();
+        }
+      }
+
+      function handleChangeWorkingPlace(value) {
+        if(value === "1") {
+          $('#register-form').find('.non-required').find('input').prop("disabled", false)
+        } else {
+          $('#register-form').find('.non-required').find('input').prop("disabled", true)
         }
       }
 
@@ -915,11 +941,12 @@
         var checkValidate = validateForm(this, 'registerForm');
         if (checkValidate) {
           var str = $("#register-form").serializeArray();
+          console.log('str => ', str)
           var body = {
-            "address": str[9].value,
-            "installation_address": str[10].value,
+            "address": str[9] && str[9].value,
+            "installation_address": str[10] && str[10].value,
             "personal_information": {
-              "birthday": str[1].value + '-01-01',
+              "birthday": str[1].value ? `${str[1].value}-01-01` : '',
               "card_number": str[2].value,
               "email": str[4].value,
               "name": str[0].value,
@@ -928,10 +955,10 @@
             "working_information": {
               "contract_duration_type": $('#contract_duration_type')[0].value,
               "career_type": $('#working-place')[0].value,
-              "department": str[5].value,
-              "income": str[8].value,
-              "office": str[6].value,
-              "position": str[7].value
+              "department": str[5] && str[5].value,
+              "income": str[8] && str[8].value.split(',').join(''),
+              "office": str[6] && str[6].value,
+              "position": str[7] && str[7].value
             }
           }
           var accessURL = "https://evnfc-be.twendeesoft.com/api/auth/signupV2";
@@ -957,7 +984,7 @@
                 //reset values in all input fields
                 $(".contact-form input").val("");
                 $(".contact-form textarea").val("");
-                var x = '<div class="alert-danger-2" style="padding:10px 15px;  margin-bottom:30px; font-weight: 400; background-color: #4CAF50 !important">Gửi yêu cầu vay thành công!</div>';
+                var x = '<div class="alert-danger-2" style="padding:10px 15px; color: #fff;  margin-bottom:30px; font-weight: 400; background-color: #4CAF50 !important">Gửi yêu cầu vay thành công!</div>';
                 // x.className = "show";
                 $("#result").hide().html(x).slideDown();
                 $(".contact_btn i").addClass("d-none");
@@ -996,7 +1023,12 @@
               $(".contact-form input").val("");
               $(".contact-form textarea").val("");
               $(".contact_btn i").addClass("d-none");
-              var x = `<div class="alert-danger-2" style="padding:10px 15px; color: #fff; font-weight: 400; margin-bottom:30px; background-color: #930000 !important">${JSON.parse(response.responseText).message}</div>`;
+              var x;
+              if(JSON.parse(response.responseText).message) {
+                x = `<div class="alert-danger-2" style="padding:10px 15px; color: #fff; font-weight: 400; margin-bottom:30px; background-color: #930000 !important">${JSON.parse(response.responseText).message}</div>`;
+              } else {
+                x = '<div class="alert-danger-2" style="padding:10px 15px; color: #fff;  margin-bottom:30px; font-weight: 400; background-color: #4CAF50 !important">Gửi yêu cầu vay thành công!</div>'
+              }
               // x.className = "show";
               $("#result").hide().html(x).slideDown();
               $(".contact_btn i").addClass("d-none");
@@ -1006,7 +1038,7 @@
                 $(".alert-danger-2").addClass("display-none");
               }, 5000);
             },
-          });
+          })
         }
       });
     </script>
