@@ -75,7 +75,8 @@
           </div>
 
           <div class="pushable">
-            <div class="ui sidebar index-sidebar vertical menu">
+            <div id="sidebar" class="ui sidebar index-sidebar vertical menu">
+              <button class="side-bar-close-icon"><i class="close icon"></i></button>
               <div class="sidebar-search">
                 <div class="tem ui icon input">
                   <input class="prompt" type="text" placeholder="">
@@ -248,11 +249,15 @@
                 <div class="block seven wide mobile seven wide table computer column ml-40">
                   <div class="text-15 text-white">
                     <div class="circle"></div>
-                    Giá trị vay dự án tối đa
+                    <span class="computer tablet only">Giá trị vay dự án tối đa</span>
+                    <span class="mobile only">Giá trị vay dự án</span>
                   </div>
-                  <div class="text-60 text-white ">85%</div>
+                  <div class=" text-60 text-white computer tablet only">85%</div>
+                  <div class=" text-60 text-white mobile only">Tối đa 85%</div>
+
+
                 </div>
-                <div class="block seven wide mobile seven wide table computer column mt-30">
+                <div class="block six wide mobile seven wide table computer column mt-30">
                   <div class="text-15 text-white">
                     <div class="circle"></div>
                     Chất lượng
@@ -521,15 +526,10 @@
                       <div class="field-error"></div>
                     </div>
                     <div class="field">
-                      <<<<<<< HEAD <label class="computer only">Vị trí/ Chức danh</label>
-                        <input type="text" placeholder="Vị trí/ Chức danh" name="position"
-                          onkeyup="handleChangePosition(this.value)">
-                        <div class="field-error"></div>
-                        =======
-                        <label>Vị trí/ Chức danh</label>
-                        <input type="text" name="position" onkeyup="handleChangePosition(this.value)">
-                        <div class="field-error"></div>
-                        >>>>>>> 6ba8cab7d0de18b9d6db203501f98d6f48b93c31
+                      <label class="computer only">Vị trí/ Chức danh</label>
+                      <input type="text" placeholder="Vị trí/ Chức danh" name="position"
+                        onkeyup="handleChangePosition(this.value)">
+                      <div class="field-error"></div>
                     </div>
                   </div>
                 </div>
@@ -539,7 +539,7 @@
                     <div class="field non-required">
                       <label class="computer only">Hợp đồng lao động</label>
                       <select id="contract_duration_type" class="ui fluid dropdown">
-                        <option value="" class="tex">Hợp đồng lao động</option>
+                        <option value="" hidden>Hợp đồng lao động</option>
                         <option value="1">1 năm</option>
                         <option value="2">2 năm</option>
                         <option value="3">3 năm</option>
@@ -548,14 +548,10 @@
                       </select>
                     </div>
                     <div class="field">
-                      <<<<<<< HEAD <label class="computer only">Thu nhập trung bình/ tháng</label>
-                        <input type="number" placeholder="Thu nhập trung bình/ tháng" name="income"
-                          onkeyup="handleChangeIncome(this.value)">
-                        =======
-                        <label>Thu nhập trung bình/ tháng</label>
-                        <input id="in-come" type="text" name="income" onkeyup="handleChangeIncome(this.value)">
-                        >>>>>>> 6ba8cab7d0de18b9d6db203501f98d6f48b93c31
-                        <div class="field-error"></div>
+                      <label class="computer only">Thu nhập trung bình/ tháng</label>
+                      <input type="number" placeholder="Thu nhập trung bình/ tháng" name="income" id="in-come"
+                        onkeyup="handleChangeIncome(this.value)">
+                      <div class="field-error"></div>
                     </div>
 
                   </div>
