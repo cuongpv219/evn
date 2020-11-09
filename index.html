@@ -18,6 +18,11 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link rel="stylesheet" type="text/css" href="css/typography.css" />
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    select:not(:focus):invalid {
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
@@ -524,7 +529,7 @@
                       <label class="computer only">Bạn đang công tác tại</label>
                       <select id="working-place" class="ui fluid dropdown"
                         onchange="handleChangeWorkingPlace(this.value)">
-                        <option value="">Bạn đang công tác tại</option>
+                        <option value="" hidden>Bạn đang công tác tại</option>
                         <option value="1">Ngành điện</option>
                         <option value="2">Ngoài ngành điện</option>
                         <option value="3">Khác</option>
