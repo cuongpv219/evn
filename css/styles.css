@@ -17,13 +17,12 @@ button a:hover {
 }
 
 .button-primary {
-  min-width: 310px;
-  max-width: 400px;
-  height: 50px;
+  height: 77px;
+  width: 310px;
+  font-size: 30px;
   background: #B42E2E;
   border-radius: 10px;
   color: #FFF;
-  font-size: 20px;
   font-weight: bold;
   line-height: 40px;
   display: -webkit-box;
@@ -102,7 +101,8 @@ button a:hover {
 
 #front-header .top-menu .menu-item, #front-header .bottom-menu .menu-item {
   color: #1D4994;
-  padding: 5px 20px;
+  padding: 7px 20px 5px;
+  font-size: 14px;
 }
 
 #front-header .top-menu .menu-item.icon, #front-header .bottom-menu .menu-item.icon {
@@ -206,6 +206,11 @@ button a:hover {
   -ms-flex: 1;
   flex: 1;
   text-align: center;
+  color: #fff;
+}
+
+#section0 .navigation-container .navigation .nav-item:hover{
+  color: #B42E2E;
 }
 
 #section0 .navigation-container .navigation .nav-item:first-child {
@@ -243,7 +248,7 @@ button a:hover {
 }
 
 #section1 .swiper-container .p2 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 #section1 .swiper-container .p3 {
@@ -363,6 +368,13 @@ button a:hover {
 .partners .swiper-button-next, .partners .swiper-container-rtl .swiper-button-prev {
   right: 0px !important;
   width: 40px;
+}
+
+.right-margin {
+  right: 40px
+}
+.left-margin {
+  left: 40px
 }
 
 .partners .swiper-slide {
@@ -1410,6 +1422,7 @@ input[type=number] {
   line-height: 25px;
 }
 
+<<<<<<< HEAD
 select[disabled], select:disabled {
   opacity: 0.4;
   cursor: not-allowed;
@@ -1430,6 +1443,53 @@ select:not(:focus):invalid {
   background-repeat: no-repeat !important;
 }
 
+=======
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.dropdown-content ul li {
+  padding: 10px 16px;
+  color: #1D4994;
+}
+
+.dropdown-content ul li:hover {
+  color: #fff;
+  background-color: #1D4994;
+}
+
+.dropdown img {
+  height: 5px;
+  width: auto;
+}
+
+.dropdown a {
+  color: #1D4994;
+  padding: 7px 20px 5px;
+  font-size: 14.5px;
+}
+>>>>>>> cd16449a61b262b89ea06e62f74cacdf2e3347a1
 @media only screen and (min-width: 992px) {
   #section4 form {
     padding-left: 40px;

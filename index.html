@@ -49,11 +49,33 @@
                       <div class="results"></div>
                     </div>
                     <div class="bottom-menu">
-                      <a href="product.html" class="menu-item font-14 text-bold text-uppercase">Sản phẩm</a>
+                      <div class="dropdown">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm </a>
+                          <img src="./images/angle-down-solid.png" />
+                        </div>
+                        <div class="dropdown-content">
+                          <ul>
+                            <li>EasySolar CBCNV điện</li>
+                            <li>EasySolar hộ dân</li>
+                          </ul>
+                        </div>
+                      </div>
                       <a href="provider.html" class="menu-item font-14 text-bold text-uppercase">Nhà cung cấp</a>
-                      <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
-                        class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
-                      </a>
+                      <div class="dropdown">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
+                            class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
+                          </a>
+                          <img src="./images/angle-down-solid.png" />
+                        </div>
+                        <div class="dropdown-content">
+                          <ul>
+                            <li>Công cụ khảo sát EVNSOLAR</li>
+                            <li>Thủ tục về điện mặt trời</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -105,7 +127,8 @@
               <img class='lg1' src="images/lg1.png" />
             </p>
             <hr />
-            <h1 class="text-60 text-bold text-white mt-0 mb-20">Giải pháp tài chính toàn diện cho Điện mặt trời mái nhà
+            <h1 class="text-60 text-bold text-white mt-0 mb-20 text-shadow">Giải pháp tài chính toàn diện cho Điện mặt
+              trời mái nhà
             </h1>
             <a class="button-primary" href="#dang-ky">
               Đăng kí vay
@@ -160,7 +183,7 @@
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
                     <div class="text-20 p1 text-white">Easy Solar</div>
-                    <div class="text-36 p2 text-white">Giải pháp tài chính toàn diện</div>
+                    <div class="text-36 p2 text-white mt-30">Giải pháp tài chính toàn diện</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
                   <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
@@ -172,7 +195,7 @@
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
                     <div class="text-20 p1 text-white">Easy Solar</div>
-                    <div class="text-36 p2 text-white">Giải pháp Kết nối hiệu quả</div>
+                    <div class="text-36 p2 text-white mt-30">Giải pháp Kết nối hiệu quả</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
                   <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
@@ -184,7 +207,7 @@
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
                     <div class="text-20 p1 text-white">Easy Solar</div>
-                    <div class="text-36 p2 text-white">Giải pháp Tư vấn thông minh</div>
+                    <div class="text-36 p2 text-white mt-30">Giải pháp Tư vấn thông minh</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
                   <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
@@ -196,9 +219,9 @@
             <div class="slide-control">
               <div class="ui grid">
                 <div class="five wide computer six wide tablet sixteen wide mobile column buttons">
-                  <div class="swiper-button-prev"> <img src="images/arrow-left-w.png"></div>
+                  <div class="swiper-button-prev left-margin"> <img src="images/arrow-left-w.png"></div>
                   <div class="swiper-pagination"> </div>
-                  <div class="swiper-button-next"><img src="images/arrow-right-w.png"></div>
+                  <div class="swiper-button-next right-margin"><img src="images/arrow-right-w.png"></div>
                 </div>
                 <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
                 </div>
@@ -549,8 +572,7 @@
                     </div>
                     <div class="field">
                       <label class="computer only">Thu nhập trung bình/ tháng</label>
-                      <input type="number" placeholder="Thu nhập trung bình/ tháng" name="income" id="in-come"
-                        onkeyup="handleChangeIncome(this.value)">
+                      <input id="in-come" type="text" name="income" onkeyup="handleChangeIncome(this.value)">
                       <div class="field-error"></div>
                     </div>
 
@@ -575,7 +597,6 @@
                     <input onchange="handleChangeCheckbox()" type="checkbox" tabindex="0" class="hidden ischeck">
                     <label>Tôi đã đọc và đồng ý với các</label> <span id="myBtn"
                       style="color: blue; padding-left: 5px; cursor: pointer">điều kiện và điều khoản</span>
-                    <div class="field-error"></div>
                   </div>
                 </div>
                 <!-- <div class="field">
@@ -715,7 +736,8 @@
       })
     </script>
     <script>
-      $('#register-form').find('.non-required').find('input').prop("disabled", true)
+      $('#register-form').find('.non-required').find('input').prop("disabled", true);
+      $('#register-form').find('.non-required').find('select').prop("disabled", true);
       function handleChangeName(value) {
         $('#register-form').find('[name="name"]').parent().find('.field-error').hide();
         if (value && value.trim() === '') {
@@ -911,15 +933,27 @@
 
       function handleChangeCheckbox() {
         if ($('.ischeck').is(':checked')) {
-          return $('.ischeck').parent().find('.field-error').hide();
+          return $("#result").hide();
         }
       }
 
       function handleChangeWorkingPlace(value) {
         if (value === "1") {
           $('#register-form').find('.non-required').find('input').prop("disabled", false)
+          $('#register-form').find('.non-required').find('select').prop("disabled", false)
+          $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "1");
+          $('#register-form').find('[name="office"]').parent().find("label").css('opacity', "1");
+          $('#register-form').find('[name="position"]').parent().find("label").css('opacity', "1");
+          $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "1");
+          $('#contract_duration_type').parent().find("label").css('opacity', "1");
         } else {
           $('#register-form').find('.non-required').find('input').prop("disabled", true)
+          $('#register-form').find('.non-required').find('select').prop("disabled", true);
+          $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "0.5")
+          $('#register-form').find('[name="position"]').parent().find("label").css('opacity', "0.5")
+          $('#register-form').find('[name="office"]').parent().find("label").css('opacity', "0.5");
+          $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "0.5");
+          $('#contract_duration_type').parent().find("label").css('opacity', "0.5");
         }
       }
 
@@ -960,46 +994,17 @@
           }
 
           //email
-          var emailHtmlElement = $(formElement).find('[name="email"]');
-          var email = emailHtmlElement.val();
-          if (!email) {
-            isValid = false;
-            emailHtmlElement.parent().find('.field-error').html('Vui lòng nhập Email!');
-          }
-
-          //working place
-          // var workingPlaceHtmlElement = $('#working-place');
-          // if (!workingPlaceHtmlElement[0].value) {
+          // var emailHtmlElement = $(formElement).find('[name="email"]');
+          // var email = emailHtmlElement.val();
+          // if (!email) {
           //   isValid = false;
-          //   workingPlaceHtmlElement.parent().find('.field-error').html('Vui lòng chọn Nơi làm việc của bạn!');
+          //   emailHtmlElement.parent().find('.field-error').html('Vui lòng nhập Email!');
           // }
 
-          //income
-          // var incomeHtmlElement = $(formElement).find('[name="income"]');
-          // var income = incomeHtmlElement.val();
-          // if (!income) {
-          //   isValid = false;
-          //   incomeHtmlElement.parent().find('.field-error').html('Vui lòng nhập Thu nhập trung bình/tháng!');
-          // }
-
-          //address
-          // var addressHtmlElement = $(formElement).find('[name="address"]');
-          // var add = addressHtmlElement.val();
-          // if (!add) {
-          //   isValid = false;
-          //   addressHtmlElement.parent().find('.field-error').html('Vui lòng nhập Địa chỉ thường trú!');
-          // }
-
-          //installation_address
-          // var installationAddressHtmlElement = $(formElement).find('[name="installation_address"]');
-          // var installAdd = installationAddressHtmlElement.val();
-          // if (!installAdd) {
-          //   isValid = false;
-          //   installationAddressHtmlElement.parent().find('.field-error').html('Vui lòng nhập Đại chỉ lắp đặt!');
-          // }
           if (!$('.ischeck').is(':checked')) {
             isValid = false;
-            $('.ischeck').parent().find('.field-error').html('Vui lòng đồng ý các điều kiện và điều khoản!');
+            x = `<div class="alert-danger-2" style="padding:10px 15px; color: #fff; font-weight: 400; margin-bottom:30px; background-color: #930000 !important">Vui lòng đồng ý các điều kiện và điều khoản</div>`;
+            $("#result").show().html(x).slideDown();
           }
         }
         if (!isValid) {
@@ -1144,6 +1149,111 @@
           modal.style.display = "none";
         }
       }
+    </script>
+
+    <!-- on focus -->
+    <script>
+      $('#register-form').find('[name="email"]').focusin(function () {
+        $('#register-form').find('[name="email"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="email"]').focusout(function () {
+        $('#register-form').find('[name="email"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="name"]').focusin(function () {
+        $('#register-form').find('[name="name"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="name"]').focusout(function () {
+        $('#register-form').find('[name="name"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="yob"]').focusin(function () {
+        $('#register-form').find('[name="yob"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="yob"]').focusout(function () {
+        $('#register-form').find('[name="yob"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="card_number"]').focusin(function () {
+        $('#register-form').find('[name="card_number"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="card_number"]').focusout(function () {
+        $('#register-form').find('[name="card_number"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="phone_number"]').focusin(function () {
+        $('#register-form').find('[name="phone_number"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="phone_number"]').focusout(function () {
+        $('#register-form').find('[name="phone_number"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="department"]').focusin(function () {
+        $('#register-form').find('[name="department"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="department"]').focusout(function () {
+        $('#register-form').find('[name="department"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="office"]').focusin(function () {
+        $('#register-form').find('[name="office"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="office"]').focusout(function () {
+        $('#register-form').find('[name="office"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="position"]').focusin(function () {
+        $('#register-form').find('[name="position"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="position"]').focusout(function () {
+        $('#register-form').find('[name="position"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="address"]').focusin(function () {
+        $('#register-form').find('[name="address"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="address"]').focusout(function () {
+        $('#register-form').find('[name="address"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="installation_address"]').focusin(function () {
+        $('#register-form').find('[name="installation_address"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="installation_address"]').focusout(function () {
+        $('#register-form').find('[name="installation_address"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="installation_address"]').focusin(function () {
+        $('#register-form').find('[name="installation_address"]').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#register-form').find('[name="income"]').focusout(function () {
+        $('#register-form').find('[name="income"]').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+
+      $('#working-place').focusin(function () {
+        $('#working-place').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#working-place').focusout(function () {
+        $('#working-place').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+      $('#contract_duration_type').focusin(function () {
+        $('#contract_duration_type').parent().find("label").css("color", "#B42E2E")
+      })
+      $('#contract_duration_type').focusout(function () {
+        $('#contract_duration_type').parent().find("label").css("color", "rgba(0,0,0,.87)")
+      })
+    </script>
+
+    <!-- Check disable input  -->
+    <script>
+      if ($('#register-form').find('[name="department"]').prop('disabled')) {
+        $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "0.5");
+        $('#register-form').find('[name="position"]').parent().find("label").css('opacity', "0.5");
+        $('#register-form').find('[name="office"]').parent().find("label").css('opacity', "0.5");
+        $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "0.5");
+        $('#contract_duration_type').parent().find("label").css('opacity', "0.5");
+      }
+
     </script>
 </body>
 
