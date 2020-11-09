@@ -49,11 +49,33 @@
                       <div class="results"></div>
                     </div>
                     <div class="bottom-menu">
-                      <a href="product.html" class="menu-item font-14 text-bold text-uppercase">Sản phẩm</a>
+                      <div class="dropdown">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm </a>
+                          <img src="./images/angle-down-solid.png" />
+                        </div>
+                        <div class="dropdown-content">
+                          <ul>
+                            <li>EasySolar CBCNV điện</li>
+                            <li>EasySolar hộ dân</li>
+                          </ul>
+                        </div>
+                      </div>
                       <a href="provider.html" class="menu-item font-14 text-bold text-uppercase">Nhà cung cấp</a>
-                      <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
-                        class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
-                      </a>
+                      <div class="dropdown">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
+                            class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
+                          </a>
+                          <img src="./images/angle-down-solid.png" />
+                        </div>
+                        <div class="dropdown-content">
+                          <ul>
+                            <li>Công cụ khảo sát EVNSOLAR</li>
+                            <li>Thủ tục về điện mặt trời</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -912,9 +934,19 @@
         if (value === "1") {
           $('#register-form').find('.non-required').find('input').prop("disabled", false)
           $('#register-form').find('.non-required').find('select').prop("disabled", false)
+          $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "1");
+          $('#register-form').find('[name="office"]').parent().find("label").css('opacity', "1");
+          $('#register-form').find('[name="position"]').parent().find("label").css('opacity', "1");
+          $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "1");
+          $('#contract_duration_type').parent().find("label").css('opacity', "1");
         } else {
           $('#register-form').find('.non-required').find('input').prop("disabled", true)
-          $('#register-form').find('.non-required').find('select').prop("disabled", true)
+          $('#register-form').find('.non-required').find('select').prop("disabled", true);
+          $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "0.5")
+          $('#register-form').find('[name="position"]').parent().find("label").css('opacity', "0.5")
+          $('#register-form').find('[name="office"]').parent().find("label").css('opacity', "0.5");
+          $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "0.5");
+          $('#contract_duration_type').parent().find("label").css('opacity', "0.5");
         }
       }
 
@@ -955,43 +987,13 @@
           }
 
           //email
-          var emailHtmlElement = $(formElement).find('[name="email"]');
-          var email = emailHtmlElement.val();
-          if (!email) {
-            isValid = false;
-            emailHtmlElement.parent().find('.field-error').html('Vui lòng nhập Email!');
-          }
-
-          //working place
-          // var workingPlaceHtmlElement = $('#working-place');
-          // if (!workingPlaceHtmlElement[0].value) {
+          // var emailHtmlElement = $(formElement).find('[name="email"]');
+          // var email = emailHtmlElement.val();
+          // if (!email) {
           //   isValid = false;
-          //   workingPlaceHtmlElement.parent().find('.field-error').html('Vui lòng chọn Nơi làm việc của bạn!');
+          //   emailHtmlElement.parent().find('.field-error').html('Vui lòng nhập Email!');
           // }
-
-          //income
-          // var incomeHtmlElement = $(formElement).find('[name="income"]');
-          // var income = incomeHtmlElement.val();
-          // if (!income) {
-          //   isValid = false;
-          //   incomeHtmlElement.parent().find('.field-error').html('Vui lòng nhập Thu nhập trung bình/tháng!');
-          // }
-
-          //address
-          // var addressHtmlElement = $(formElement).find('[name="address"]');
-          // var add = addressHtmlElement.val();
-          // if (!add) {
-          //   isValid = false;
-          //   addressHtmlElement.parent().find('.field-error').html('Vui lòng nhập Địa chỉ thường trú!');
-          // }
-
-          //installation_address
-          // var installationAddressHtmlElement = $(formElement).find('[name="installation_address"]');
-          // var installAdd = installationAddressHtmlElement.val();
-          // if (!installAdd) {
-          //   isValid = false;
-          //   installationAddressHtmlElement.parent().find('.field-error').html('Vui lòng nhập Đại chỉ lắp đặt!');
-          // }
+          
           if (!$('.ischeck').is(':checked')) {
             isValid = false;
             x = `<div class="alert-danger-2" style="padding:10px 15px; color: #fff; font-weight: 400; margin-bottom:30px; background-color: #930000 !important">Vui lòng đồng ý các điều kiện và điều khoản</div>`;
@@ -1140,6 +1142,111 @@
           modal.style.display = "none";
         }
       }
+    </script>
+
+    <!-- on focus -->
+    <script>
+      $('#register-form').find('[name="email"]').focusin(function() {
+        $('#register-form').find('[name="email"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="email"]').focusout(function() {
+        $('#register-form').find('[name="email"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="name"]').focusin(function() {
+        $('#register-form').find('[name="name"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="name"]').focusout(function() {
+        $('#register-form').find('[name="name"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="yob"]').focusin(function() {
+        $('#register-form').find('[name="yob"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="yob"]').focusout(function() {
+        $('#register-form').find('[name="yob"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="card_number"]').focusin(function() {
+        $('#register-form').find('[name="card_number"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="card_number"]').focusout(function() {
+        $('#register-form').find('[name="card_number"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="phone_number"]').focusin(function() {
+        $('#register-form').find('[name="phone_number"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="phone_number"]').focusout(function() {
+        $('#register-form').find('[name="phone_number"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="department"]').focusin(function() {
+        $('#register-form').find('[name="department"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="department"]').focusout(function() {
+        $('#register-form').find('[name="department"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="office"]').focusin(function() {
+        $('#register-form').find('[name="office"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="office"]').focusout(function() {
+        $('#register-form').find('[name="office"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="position"]').focusin(function() {
+        $('#register-form').find('[name="position"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="position"]').focusout(function() {
+        $('#register-form').find('[name="position"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="address"]').focusin(function() {
+        $('#register-form').find('[name="address"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="address"]').focusout(function() {
+        $('#register-form').find('[name="address"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="installation_address"]').focusin(function() {
+        $('#register-form').find('[name="installation_address"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="installation_address"]').focusout(function() {
+        $('#register-form').find('[name="installation_address"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#register-form').find('[name="installation_address"]').focusin(function() {
+        $('#register-form').find('[name="installation_address"]').parent().find("label").css("color","#B42E2E")
+      })
+      $('#register-form').find('[name="income"]').focusout(function() {
+        $('#register-form').find('[name="income"]').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+
+      $('#working-place').focusin(function() {
+        $('#working-place').parent().find("label").css("color","#B42E2E")
+      })
+      $('#working-place').focusout(function() {
+        $('#working-place').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+      $('#contract_duration_type').focusin(function() {
+        $('#contract_duration_type').parent().find("label").css("color","#B42E2E")
+      })
+      $('#contract_duration_type').focusout(function() {
+        $('#contract_duration_type').parent().find("label").css("color","rgba(0,0,0,.87)")
+      })
+    </script>
+
+    <!-- Check disable input  -->
+    <script>
+      if($('#register-form').find('[name="department"]').prop('disabled')) {
+        $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "0.5");
+        $('#register-form').find('[name="position"]').parent().find("label").css('opacity', "0.5");
+          $('#register-form').find('[name="office"]').parent().find("label").css('opacity', "0.5");
+          $('#register-form').find('[name="department"]').parent().find("label").css('opacity', "0.5");
+          $('#contract_duration_type').parent().find("label").css('opacity', "0.5");
+      }
+      
     </script>
 </body>
 
