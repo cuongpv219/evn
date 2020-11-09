@@ -521,15 +521,9 @@
                       <div class="field-error"></div>
                     </div>
                     <div class="field">
-                      <<<<<<< HEAD <label class="computer only">Vị trí/ Chức danh</label>
-                        <input type="text" placeholder="Vị trí/ Chức danh" name="position"
-                          onkeyup="handleChangePosition(this.value)">
-                        <div class="field-error"></div>
-                        =======
-                        <label>Vị trí/ Chức danh</label>
+                        <label class="computer only">Vị trí/ Chức danh</label>
                         <input type="text" name="position" onkeyup="handleChangePosition(this.value)">
                         <div class="field-error"></div>
-                        >>>>>>> 6ba8cab7d0de18b9d6db203501f98d6f48b93c31
                     </div>
                   </div>
                 </div>
@@ -548,13 +542,8 @@
                       </select>
                     </div>
                     <div class="field">
-                      <<<<<<< HEAD <label class="computer only">Thu nhập trung bình/ tháng</label>
-                        <input type="number" placeholder="Thu nhập trung bình/ tháng" name="income"
-                          onkeyup="handleChangeIncome(this.value)">
-                        =======
-                        <label>Thu nhập trung bình/ tháng</label>
+                        <label class="computer only">Thu nhập trung bình/ tháng</label>
                         <input id="in-come" type="text" name="income" onkeyup="handleChangeIncome(this.value)">
-                        >>>>>>> 6ba8cab7d0de18b9d6db203501f98d6f48b93c31
                         <div class="field-error"></div>
                     </div>
 
@@ -579,7 +568,6 @@
                     <input onchange="handleChangeCheckbox()" type="checkbox" tabindex="0" class="hidden ischeck">
                     <label>Tôi đã đọc và đồng ý với các</label> <span id="myBtn"
                       style="color: blue; padding-left: 5px; cursor: pointer">điều kiện và điều khoản</span>
-                    <div class="field-error"></div>
                   </div>
                 </div>
                 <!-- <div class="field">
@@ -916,7 +904,7 @@
 
       function handleChangeCheckbox() {
         if ($('.ischeck').is(':checked')) {
-          return $('.ischeck').parent().find('.field-error').hide();
+          return $("#result").hide();
         }
       }
 
@@ -1006,7 +994,8 @@
           // }
           if (!$('.ischeck').is(':checked')) {
             isValid = false;
-            $('.ischeck').parent().find('.field-error').html('Vui lòng đồng ý các điều kiện và điều khoản!');
+            x = `<div class="alert-danger-2" style="padding:10px 15px; color: #fff; font-weight: 400; margin-bottom:30px; background-color: #930000 !important">Vui lòng đồng ý các điều kiện và điều khoản</div>`;
+            $("#result").show().html(x).slideDown();
           }
         }
         if (!isValid) {
