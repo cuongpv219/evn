@@ -1,13 +1,13 @@
 @font-face {
   font-family: Roboto;
   src: url("../fonts/RobotoRegular.ttf")
-  /* TTF file for CSS3 browsers  */
+    /* TTF file for CSS3 browsers  */
 }
 
 @font-face {
   font-family: Lato;
   src: url("../fonts/Lato-Regular.ttf")
-  /* TTF file for CSS3 browsers  */
+    /* TTF file for CSS3 browsers  */
 }
 @font-face {
   font-family: Lato2;
@@ -248,6 +248,50 @@ img {
   padding-left: 100px;
 }
 
+.ml-0 {
+  margin-left: 0px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.ml-40 {
+  margin-left: 40px;
+}
+
+.ml-50 {
+  margin-left: 50px;
+}
+
+.ml-60 {
+  margin-left: 60px;
+}
+
+.ml-70 {
+  margin-left: 70px;
+}
+
+.ml-80 {
+  margin-left: 80px;
+}
+
+.ml-90 {
+  margin-left: 90px;
+}
+
+.ml-100 {
+  margin-left: 100px;
+}
+
 .align-right {
   text-align: right;
 }
@@ -258,6 +302,14 @@ img {
 
 .align-center {
   text-align: center;
+}
+
+.align-center-important {
+  text-align: center !important;
+}
+
+.text-shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .full-width {
@@ -374,50 +426,66 @@ img {
 @media only screen and (max-width: 992px) {}
 
 @media only screen and (max-width: 768px) {
+  .text-10 {
+    font-size: 10px;
+    line-height: 20px;
+  }
+
   .text-15 {
     font-size: 12px;
     line-height: 20px;
   }
+
   .text-16 {
     font-size: 16px;
     line-height: 24px;
   }
+
   .text-18 {
     font-size: 18px;
     line-height: 26px;
   }
+
   .text-20 {
     font-size: 14px;
     line-height: 28px;
   }
+
   .text-22 {
     font-size: 14px;
     line-height: 28px;
   }
+
   .text-24 {
     font-size: 24px;
     line-height: 32px;
   }
+
   .text-26 {
     font-size: 26px;
     line-height: 36px;
   }
+
   .text-28 {
     font-size: 26px;
     line-height: 38px;
   }
+
   .text-30 {
     font-size: 30px;
     line-height: 42px;
   }
+
   .text-36 {
     font-size: 20px;
     line-height: 32px;
   }
+
   .text-40 {
     font-size: 20px;
     line-height: 28px;
   }
+
   .text-60 {
     font-size: 20px;
     line-height: 32px;

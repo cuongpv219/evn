@@ -46,7 +46,8 @@
                 <div class="bottom-menu">
                   <a href="product.html" class="menu-item font-14 text-bold text-uppercase">Sản phẩm</a>
                   <a href="provider.html" class="menu-item font-14 text-bold text-uppercase active">Nhà cung cấp</a>
-                  <a href="https://solar.evn.com.vn/#/calculator" class="menu-item font-14 text-bold text-uppercase">Tư
+                  <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
+                    class="menu-item font-14 text-bold text-uppercase">Tư
                     vấn - trải nghiệm
                   </a>
                 </div>
@@ -71,16 +72,23 @@
 
       <div class="pushable">
         <div class="ui sidebar other-sidebar vertical menu">
-          <div class="ui sidebar index-sidebar vertical menu">
+          <div class="sidebar-search">
+            <div class="tem ui icon input">
+              <input class="prompt" type="text" placeholder="">
+              <i class="search icon"></i>
+            </div>
+          </div>
+          <a href="#" class="item font-14 text-bold text-uppercase">Liên hệ</a>
+          <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm</a>
+          <a href="provider.html" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+          <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
+            class="item font-14 text-bold text-uppercase">Tư vấn
+            - trải nghiệm
+          </a>
+          <div class="siderbar-bottom">
             <a href="intro.html" class="item font-14 text-bold text-uppercase">Giới thiệu</a>
             <a href="support.html" class="item font-14 text-bold text-uppercase">Hỗ trợ</a>
-            <a href="#" class="item font-14 text-bold text-uppercase">Liên hệ</a>
             <a href="#" class="item font-14 text-bold text-uppercase">Đăng nhập</a>
-            <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm</a>
-            <a href="provider.html" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
-            <a href="https://solar.evn.com.vn/#/calculator" class="item font-14 text-bold text-uppercase">Tư vấn
-              - trải nghiệm
-            </a>
           </div>
         </div>
       </div>
@@ -414,10 +422,9 @@
       <div id="provider-section-2" class="mb-60">
         <div class="ui container">
           <div class="ui stackable grid">
-            <div class="eight wide column">
-              <img style="width: 100%; height: 100%; object-fit: cover" src="images/inter.jpg" />
+            <div class="eight wide column inter">
             </div>
-            <div class="eight wide column">
+            <div class="eight wide column content-box">
               <div class="text-30 mb-20 text-red">
                 Công ty cổ phần <strong>INTERSOLAR</strong>
               </div>
@@ -515,6 +522,7 @@
           nextEl: '.partners-button-next',
           prevEl: '.partners-button-prev',
         },
+        loop: true,
         breakpoints: {
           640: {
             slidesPerView: 1,
