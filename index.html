@@ -95,7 +95,7 @@
               <img class='lg1' src="images/lg1.png" />
             </p>
             <hr />
-            <h1 class="text-60 text-bold text-white mt-0 mb-20">Giải pháp tài chính toàn diện cho Điện mặt trời mái nhà
+            <h1 class="text-60 text-bold text-white mt-0 mb-20 text-shadow">Giải pháp tài chính toàn diện cho Điện mặt trời mái nhà
             </h1>
             <a class="button-primary" href="#dang-ky">
               Đăng kí vay
@@ -123,7 +123,7 @@
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
                     <div class="text-20 p1 text-white">Easy Solar</div>
-                    <div class="text-36 p2 text-white">Giải pháp tài chính toàn diện</div>
+                    <div class="text-36 p2 text-white mt-30">Giải pháp tài chính toàn diện</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
                   <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
@@ -135,7 +135,7 @@
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
                     <div class="text-20 p1 text-white">Easy Solar</div>
-                    <div class="text-36 p2 text-white">Giải pháp Kết nối hiệu quả</div>
+                    <div class="text-36 p2 text-white mt-30">Giải pháp Kết nối hiệu quả</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
                   <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
@@ -147,7 +147,7 @@
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
                     <div class="text-20 p1 text-white">Easy Solar</div>
-                    <div class="text-36 p2 text-white">Giải pháp Tư vấn thông minh</div>
+                    <div class="text-36 p2 text-white mt-30">Giải pháp Tư vấn thông minh</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
                   <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
@@ -159,9 +159,9 @@
             <div class="slide-control">
               <div class="ui grid">
                 <div class="five wide computer six wide tablet sixteen wide mobile column buttons">
-                  <div class="swiper-button-prev"> <img src="images/arrow-left-w.png"></div>
+                  <div class="swiper-button-prev left-margin"> <img src="images/arrow-left-w.png"></div>
                   <div class="swiper-pagination"> </div>
-                  <div class="swiper-button-next"><img src="images/arrow-right-w.png"></div>
+                  <div class="swiper-button-next right-margin"><img src="images/arrow-right-w.png"></div>
                 </div>
                 <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
                 </div>
@@ -656,7 +656,8 @@
       })
     </script>
     <script>
-      $('#register-form').find('.non-required').find('input').prop("disabled", true)
+      $('#register-form').find('.non-required').find('input').prop("disabled", true);
+      $('#register-form').find('.non-required').find('select').prop("disabled", true);
       function handleChangeName(value) {
         $('#register-form').find('[name="name"]').parent().find('.field-error').hide();
         if (value && value.trim() === '') {
@@ -859,8 +860,10 @@
       function handleChangeWorkingPlace(value) {
         if(value === "1") {
           $('#register-form').find('.non-required').find('input').prop("disabled", false)
+          $('#register-form').find('.non-required').find('select').prop("disabled", false)
         } else {
           $('#register-form').find('.non-required').find('input').prop("disabled", true)
+          $('#register-form').find('.non-required').find('select').prop("disabled", true)
         }
       }
 

@@ -9,6 +9,11 @@
   src: url("../fonts/Lato-Regular.ttf")
   /* TTF file for CSS3 browsers  */
 }
+@font-face {
+  font-family: Lato2;
+  src: url("../font2/Lato-Regular_2.ttf")
+  /* TTF file for CSS3 browsers  */
+}
 
 body {
   font-size: 16px;
@@ -20,7 +25,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, span, button, th, td, li, input, div {
-  font-family: Roboto, "Segoe UI", Arial, sans-serif !important;
+  font-family: Lato2, "Segoe UI", Arial, sans-serif !important;
 }
 
 img {
@@ -360,6 +365,10 @@ img {
 
 .text-justify {
   text-align: justify;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
 @media only screen and (max-width: 992px) {}

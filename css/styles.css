@@ -13,8 +13,6 @@ button a:hover {
 }
 
 .button-primary {
-  min-width: 310px;
-  max-width: 400px;
   height: 50px;
   background: #B42E2E;
   border-radius: 10px;
@@ -33,6 +31,7 @@ button a:hover {
   justify-content: center;
   border: none;
   padding: 10px 40px;
+  width: 280px;
 }
 
 .button-primary:focus {
@@ -98,7 +97,8 @@ button a:hover {
 
 #front-header .top-menu .menu-item, #front-header .bottom-menu .menu-item {
   color: #1D4994;
-  padding: 5px 20px;
+  padding: 7px 20px 5px;
+  font-size: 14px;
 }
 
 #front-header .top-menu .menu-item.icon, #front-header .bottom-menu .menu-item.icon {
@@ -239,7 +239,7 @@ button a:hover {
 }
 
 #section1 .swiper-container .p2 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 #section1 .swiper-container .p3 {
@@ -352,8 +352,15 @@ button a:hover {
 }
 
 .partners .swiper-button-next, .partners .swiper-container-rtl .swiper-button-prev {
-  right: 0px !important;
+  right: px !important;
   width: 40px;
+}
+
+.right-margin {
+  right: 40px
+}
+.left-margin {
+  left: 40px
 }
 
 .partners .swiper-slide {
