@@ -1548,6 +1548,25 @@ select:not(:focus):invalid {
   max-width: 150px;
 }
 
+.contact-content {
+  height: 1031px;
+  position: relative;
+}
+
+.contact-content .container {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#map {
+  height: 100%;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
 @media only screen and (min-width: 992px) {
   #cover-intro .go-to-div {
     width: 300px;
