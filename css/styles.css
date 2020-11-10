@@ -24,7 +24,6 @@ button a:hover {
   border-radius: 10px;
   color: #FFF;
   font-weight: bold;
-  line-height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -816,7 +815,7 @@ button a:hover {
 }
 
 .download-form button i {
-  margin-top: -15px;
+  margin-top: 15px;
   margin-left: 6px;
 }
 
@@ -950,6 +949,10 @@ select option:first-child {
 }
 
 @media only screen and (max-width: 768px) {
+  .download-form button i {
+    margin-top: 0px;
+    margin-left: 6px;
+  }
   input::placeholder {
     color: rgba(0, 0, 0, 0.87) !important;
   }
@@ -981,6 +984,7 @@ select option:first-child {
   }
   .button-primary {
     height: 45px;
+    font-size: 20px;
   }
   .ui.sidebar.visible {
     width: 100%;
@@ -1494,6 +1498,12 @@ select:not(:focus):invalid {
 }
 
 @media only screen and (min-width: 992px) {
+  #cover-intro .go-to-div {
+    width: 300px;
+  }
+  #product-section-4 button {
+    width: 500px;
+  }
   #section4 form {
     padding-left: 40px;
   }
