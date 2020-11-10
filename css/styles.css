@@ -37,6 +37,37 @@ button a:hover {
   padding: 10px 40px;
 }
 
+.form-btn {
+  width: 388px;
+  height: 50px;
+  font-size: 20px;
+}
+.loan-request-btn {
+  height: 50px;
+  width: 340px;
+  font-size: 20px;
+  background: #B42E2E;
+  border-radius: 10px;
+  color: #FFF;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  padding: 10px 40px;
+}
+
+.loan-request-btn img{
+  width: 34px;
+  margin-left: 20px;
+}
+
 .button-primary:focus {
   border: none;
   outline: none;
@@ -274,6 +305,7 @@ button a:hover {
 
 #section1 .swiper-container .slide-control .buttons {
   margin-left: 10px;
+  top: 20px;
 }
 
 #section1 .swiper-container .slide-control .swiper-pagination {
@@ -546,7 +578,7 @@ button a:hover {
 }
 
 #section4 .content {
-  background: url('../images/image-6.png');
+  background: url('../images/image-6-2.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -899,7 +931,7 @@ button a:hover {
 .accordion .title i {
   position: absolute;
   top: 18px;
-  right: 10px;
+  right: 25px;
   color: #FFF;
 }
 
@@ -909,6 +941,13 @@ button a:hover {
 
 .accordion .content.active {
   background: rgba(246, 187, 59, 0.2);
+}
+
+.ui.accordion .accordion .active.title .dropdown.icon, .ui.accordion .active.title .dropdown.icon, .ui.accordion.menu .item .active.title>.dropdown.icon {
+  -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    right: 0;
 }
 
 #support-section-1 .accordion {
@@ -1071,13 +1110,18 @@ select option:first-child {
     right: 25px;
   }
   #provider-section-2 .inter {
-    min-height: 600px;
-    margin-bottom: 50px !important;
+    min-height: 225px;
+    margin-bottom: 40px !important;
+    background-size: contain;
   }
   .button-primary {
     padding: 10px 0px;
     max-width: 250px;
     min-width: 250px;
+  }
+  .loan-request-btn, .form-btn {
+    padding: 10px 0px;
+    max-width: 312px;
   }
   .partners .swiper-slide img {
     width: 50%;
@@ -1448,6 +1492,9 @@ select:not(:focus):invalid {
   width: 20px;
   background-size: 7px 12px !important;
   background-repeat: no-repeat !important;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 /* Dropdown */
@@ -1495,6 +1542,10 @@ select:not(:focus):invalid {
   color: #1D4994;
   padding: 7px 20px 5px;
   font-size: 14.5px;
+}
+
+.logo-solution {
+  max-width: 150px;
 }
 
 @media only screen and (min-width: 992px) {
