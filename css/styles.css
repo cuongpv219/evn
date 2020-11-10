@@ -716,7 +716,7 @@ button a:hover {
   display: block;
   color: #1D4994;
 }
-.go-to-action:hover {
+.go-to-action.text-white:hover {
   color: #fff;
 }
 
@@ -1537,9 +1537,18 @@ select:not(:focus):invalid {
   color: #1D4994;
 }
 
+.dropdown-content ul li a {
+  padding: 0px;
+}
+
 .dropdown-content ul li:hover {
-  color: #fff;
   background-color: #1D4994;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-content ul li:hover a{
+  color: #fff;
 }
 
 .dropdown img {
@@ -1576,6 +1585,28 @@ select:not(:focus):invalid {
   /* The width is the width of the web page */
 }
 
+.template-reference {
+  max-width: 1127px;
+  margin: auto;
+}
+
+.template-reference table{
+  width: 100%;
+}
+
+.advisory-content #front-table {
+  margin: 40px 0px;
+}
+
+.advisory-content #front-table i.icon {
+  color: #979797;
+  font-size: 1.5em;
+}
+
+.advisory-content #front-table tr:hover i.icon {
+  color: #fff
+}
+
 @media only screen and (min-width: 992px) {
   #cover-intro .go-to-div {
     width: 300px;
@@ -1587,6 +1618,13 @@ select:not(:focus):invalid {
     height: 54px !important;
     width: 241px !important;
     font-size: 20px;
+  }
+  .advisory-btn {
+    width: 308px;
+    height: 54px;
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 10px 20px;
   }
   #product-section-4 button {
     width: 290px;

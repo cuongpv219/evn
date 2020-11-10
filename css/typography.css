@@ -24,7 +24,7 @@ body {
   z-index: 999999999;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span, button, th, td, li, input, div {
+h1, h2, h3, h4, h5, h6, p, a, span, button, th, td, li, input {
   font-family: Lato2, "Segoe UI", Arial, sans-serif !important;
 }
 

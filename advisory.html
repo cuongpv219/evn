@@ -35,7 +35,7 @@
                     <div class="top-menu">
                     <a href="intro.html" class="menu-item font-14 text-bold text-uppercase">Giới thiệu</a>
                     <a href="support.html" class="menu-item font-14 text-bold text-uppercase">Hỗ trợ</a>
-                    <a href="contact.html" class="menu-item font-14 text-bold text-uppercase active">Liên hệ</a>
+                    <a href="contact.html" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
                     <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
                     <div class=" menu-item ui icon input">
                         <input class="prompt" type="text" placeholder="">
@@ -47,7 +47,7 @@
                     <a href="product.html" class="menu-item font-14 text-bold text-uppercase">Sản phẩm</a>
                     <a href="provider.html" class="menu-item font-14 text-bold text-uppercase">Nhà cung cấp</a>
                     <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
-                        class="menu-item font-14 text-bold text-uppercase">Tư
+                        class="menu-item font-14 text-bold text-uppercase active">Tư
                         vấn - trải nghiệm
                     </a>
                     </div>
@@ -97,20 +97,61 @@
     <div id="front-content">
         <div id="cover-intro">
             <div class="ui container">
-            <div class="text-60 text-uppercase text-white text-bold text-shadow">Liên hệ </div>
+            <div class="text-60 text-uppercase text-white text-bold text-shadow">TƯ VẤN - TRẢI  NGHIỆM </div>
+            <a class="button-primary anchor advisory-btn" href="https://solar.evn.com.vn/#/calculator">
+                Công cụ khảo sát EVNSOLAR
+            </a>
         </div>
     </div>
-    <div class="contact-content">
-        <div id="map"></div>
-        <div class="ui container">
-            <div id="support-section-2" class="mt-60 mb-40">
-                <div class="content">
-                    <div class="text-20 text-bold text-uppercase text-white">Tư vấn trực tiếp</div>
-                    <div class="text-40 text-bold text-uppercase text-white">024.2222.9999</div>
-                    <div class="text-14 text-bold text-white">Máy lẻ 761 hoặc 762 hoặc 763</div>
-                    <div class="text-14 text-bold text-white">Hoặc gửi mail tới địa chỉ solar@evnfc.vn</div>
+    <div class="advisory-content">
+        <div id="front-tabs">
+            <div class="container ui">
+                <div class="tabs-container">
+                    <a class="item anchor text-20 text-bold" href="#">Thủ tục điện</a>
+                    <a class="item anchor text-20 text-bold" href="#">Pháp luật</a> 
                 </div>
             </div>
+        </div>
+        <div class="template-reference">
+            <table id="front-table" class="ui single line table padding-first-child">
+                <thead>
+                    <tr>
+                        <th colspan="2">VĂN BẢN THAM KHẢO</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        CMND/CCCD/Hộ chiếu người vay và vợ (chồng) của người đi vay (nếu đã kết hôn)
+                    </td>
+                    <td>
+                        <i class="ui icon arrow alternate circle down"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Kết quả khảo sát nhu cầu lắp đặt trên EVNSolar
+                    </td>
+                    <td>
+                        <i class="ui icon arrow alternate circle down"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ảnh chụp mái nhà ở 3- 5 góc chụp khác nhau
+                    </td>
+                    <td>
+                        <i class="ui icon arrow alternate circle down"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hóa đơn tiền điện hoặc báo cáo tiêu thụ điện từ cổng CSKH của điện lực trong 6 tháng gần nhất
+                    </td>
+                    <td>
+                        <i class="ui icon arrow alternate circle down"></i>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
     
@@ -132,9 +173,6 @@
             </div>
         </div>
     </div>
-
-
-
     </div>
 
     <div class="footer-container">
@@ -172,28 +210,6 @@
             </div>
         </div>
     </div>
-
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuA-yX_z3esO2vmem94LRPFe4NGE9LLUw&callback=initMap&libraries=&v=weekly"
-        defer
-    ></script>
-    <script>
-        // Initialize and add the map
-        function initMap() {
-          // The location of Uluru
-            const uluru = { lat: 21.044524, lng: 105.843538 };
-            // The map, centered at Uluru
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 20 ,
-                center: uluru,
-            });
-            // The marker, positioned at Uluru
-            const marker = new google.maps.Marker({
-                position: uluru,
-                map: map,
-            });
-        }
-    </script>
 </body>
 
 </html>
