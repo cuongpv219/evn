@@ -42,6 +42,7 @@ button a:hover {
   height: 50px;
   font-size: 20px;
 }
+
 .loan-request-btn {
   height: 50px;
   width: 340px;
@@ -345,7 +346,8 @@ button a:hover {
 
 #section2 .content-box .content {
   background: #B42E2E;
-  padding: 60px 20px;
+  opacity: 0.95;
+  padding: 60px 50px;
 }
 
 #section2 .blocks {
@@ -714,6 +716,9 @@ button a:hover {
   display: block;
   color: #1D4994;
 }
+.go-to-action:hover {
+  color: #fff;
+}
 
 .go-to-action .img-box {
   width: 20px;
@@ -847,8 +852,7 @@ button a:hover {
 }
 
 .download-form button i {
-  margin-top: 15px;
-  margin-left: 6px;
+  margin-left: 10px;
 }
 
 #front-bottom {
@@ -987,7 +991,11 @@ select option:first-child {
   color: #930000 !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) { 
+
+  .register-btn {
+    margin-bottom: 30px;
+  }
   .download-form button i {
     margin-top: 0px;
     margin-left: 6px;
@@ -1069,7 +1077,7 @@ select option:first-child {
     padding-bottom: 100px;
   }
   #section0 .navigation-container {
-    bottom: 200px;
+    bottom: 150px;
   }
   #section0 .icon-box {
     position: absolute;
@@ -1119,6 +1127,7 @@ select option:first-child {
     max-width: 250px;
     min-width: 250px;
   }
+  
   .loan-request-btn, .form-btn {
     padding: 10px 0px;
     max-width: 312px;
@@ -1571,8 +1580,18 @@ select:not(:focus):invalid {
   #cover-intro .go-to-div {
     width: 300px;
   }
+  .right-content {
+    padding-left: 40px !important;
+  }
+  .product-register-btn {
+    height: 54px !important;
+    width: 241px !important;
+    font-size: 20px;
+  }
   #product-section-4 button {
-    width: 500px;
+    width: 290px;
+    height: 50px;
+    font-size: 20px;
   }
   #section4 form {
     padding-left: 40px;
