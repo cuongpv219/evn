@@ -736,13 +736,15 @@ button a:hover {
 
 .item-card>div {
   background: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 20px rgba(151, 151, 151, 0.3);
-  box-shadow: 0px 0px 20px rgba(151, 151, 151, 0.3);
   border-radius: 10px;
   padding: 20px;
   min-height: 260px;
   text-align: center;
   height: 100%;
+}
+.item-card>div:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(151, 151, 151, 0.3);
+  box-shadow: 0px 0px 20px rgba(151, 151, 151, 0.3);
 }
 
 .item-card img {
@@ -1538,7 +1540,7 @@ select:not(:focus):invalid {
 }
 
 .dropdown-content ul li a {
-  padding: 0px;
+  padding: 0px !important;
 }
 
 .dropdown-content ul li:hover {
@@ -1554,11 +1556,12 @@ select:not(:focus):invalid {
 .dropdown img {
   height: 5px;
   width: auto;
+  padding-right: 20px;
 }
 
 .dropdown a {
   color: #1D4994;
-  padding: 7px 20px 5px;
+  padding: 7px 10px 5px 20px !important;
   font-size: 14.5px;
 }
 
@@ -1595,7 +1598,7 @@ select:not(:focus):invalid {
 }
 
 .advisory-content #front-table {
-  margin: 40px 0px;
+  margin: 40px 0px 100px;
 }
 
 .advisory-content #front-table i.icon {
@@ -1605,6 +1608,16 @@ select:not(:focus):invalid {
 
 .advisory-content #front-table tr:hover i.icon {
   color: #fff
+}
+
+.prd-active {
+  border-radius: 10px;
+  padding-right: 20px;
+  background-color: #1D4994;
+}
+
+.prd-active a {
+  color: #fff !important;
 }
 
 @media only screen and (min-width: 992px) {
