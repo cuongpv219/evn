@@ -525,11 +525,22 @@
 
                 <div class="field">
                   <div class="two fields">
-                    <div class="field">
-                      <label class="computer only">Bạn đang công tác tại</label>
-                      <select id="working-place" class="ui fluid dropdown"
+                    <div class="field hide-mobile">
+                      <label class="computer only">Nghề nghiệp</label>
+                      <select id="working-place" class="ui fluid dropdown" placeholder="Nghề nghiệp"
                         onchange="handleChangeWorkingPlace(this.value)">
-                        <option value="" hidden>Bạn đang công tác tại</option>
+                        <option value=""></option>
+                        <option value="1">Ngành điện</option>
+                        <option value="2">Ngoài ngành điện</option>
+                        <option value="3">Khác</option>
+                      </select>
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="field hide-desktop">
+                      <label class="computer only">Nghề nghiệp</label>
+                      <select id="working-place" class="ui fluid dropdown" placeholder="Nghề nghiệp"
+                        onchange="handleChangeWorkingPlace(this.value)">
+                        <option value="">Nghề nghiệp</option>
                         <option value="1">Ngành điện</option>
                         <option value="2">Ngoài ngành điện</option>
                         <option value="3">Khác</option>
@@ -563,11 +574,22 @@
                 </div>
 
                 <div class="field">
-                  <div class="two fields">
-                    <div class="field non-required">
+                  <div class="two fields hide-mobile">
+                    <div class="field non-required hide-mobile">
                       <label class="computer only">Hợp đồng lao động</label>
                       <select id="contract_duration_type" class="ui fluid dropdown">
-                        <option value="" hidden>Hợp đồng lao động</option>
+                        <option value=""></option>
+                        <option value="1">1 năm</option>
+                        <option value="2">2 năm</option>
+                        <option value="3">3 năm</option>
+                        <option value="4">Không giới hạn</option>
+                        <option value="5">Khác</option>
+                      </select>
+                    </div>
+                    <div class="field non-required hide-desktop">
+                      <label class="computer only">Hợp đồng lao động</label>
+                      <select id="contract_duration_type" class="ui fluid dropdown">
+                        <option value="">Hợp đồng lao động</option>
                         <option value="1">1 năm</option>
                         <option value="2">2 năm</option>
                         <option value="3">3 năm</option>

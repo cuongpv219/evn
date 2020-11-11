@@ -993,8 +993,20 @@ select option:first-child {
   color: #930000 !important;
 }
 
-@media only screen and (max-width: 768px) { 
+.hide-desktop {
+  display: none;
+}
+.hide-mobile {
+  display: block;
+}
 
+@media only screen and (max-width: 768px) { 
+  .hide-desktop {
+    display: block;
+  }
+  .hide-mobile {
+    display: none;
+  }
   .register-btn {
     margin-bottom: 30px;
   }
