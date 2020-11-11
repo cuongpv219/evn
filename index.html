@@ -57,7 +57,7 @@
                       <div class="dropdown">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                           <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm </a>
-                          <img src="./images/angle-down-solid.png" />
+                          <!-- <img src="./images/angle-down-solid.png" /> -->
                         </div>
                         <div class="dropdown-content">
                           <ul>
@@ -72,7 +72,7 @@
                           <a href="advisory.html"
                             class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
                           </a>
-                          <img src="./images/angle-down-solid.png" />
+                          <!-- <img src="./images/angle-down-solid.png" /> -->
                         </div>
                         <div class="dropdown-content">
                           <ul>
@@ -199,7 +199,7 @@
               <div class="swiper-slide">
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
-                    <div class="text-20 p1 text-white">Easy Solar</div>
+                    <div class="text-20 p1 text-white"><img class="logo-solution" src="./images/lg4.png" /></div>
                     <div class="text-36 p2 text-white mt-30">Giải pháp Kết nối hiệu quả</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
@@ -211,7 +211,7 @@
               <div class="swiper-slide">
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
-                    <div class="text-20 p1 text-white">Easy Solar</div>
+                    <div class="text-20 p1 text-white"><img class="logo-solution" src="./images/lg4.png" /></div>
                     <div class="text-36 p2 text-white mt-30">Giải pháp Tư vấn thông minh</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
@@ -495,7 +495,8 @@
                     </div>
                     <div class="field">
                       <label class="computer only">Năm sinh</label>
-                      <input type="number" placeholder="Năm sinh" name="yob" onkeyup="handleChangeYOB(this.value)">
+                      <input type="text" onkeydown="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                        placeholder="Năm sinh" name="yob" onkeyup="handleChangeYOB(this.value)">
                       <div class="field-error"></div>
                     </div>
                   </div>
@@ -650,7 +651,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h3>Điều kiện và điều khoản</h3>
-              <span class="close">&times;</span>
+              <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
             </div>
             <p>Bằng việc sử dụng hoặc duyệt trang web này ("Trang web") hay bất kỳ trang web nào khác ("Trang web của
               EVNFinance") của EVNFinance, bạn xác nhận rằng mình đã đọc, hiểu và đồng ý chịu sự ràng buộc của các Điều

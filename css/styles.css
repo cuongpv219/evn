@@ -1001,6 +1001,9 @@ select option:first-child {
 }
 
 @media only screen and (max-width: 768px) { 
+  #section0 .content .lg1 {
+    width: 180px;
+  }
   .hide-desktop {
     display: block;
   }
@@ -1151,6 +1154,10 @@ select option:first-child {
   }
   #front-tabs .ui.container {
     width: 100% !important;
+  }
+  .ui.container {
+    margin-left: 35px !important;
+    margin-right: 35px !important;
   }
   #front-tabs .ui.container .tabs-container {
     width: 100% !important;
