@@ -623,8 +623,50 @@ button a:hover {
   width: 250px;
 }
 
+#cover-advisory {
+  background-image: url("../images/image37.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 5px solid #F6BB3B;
+}
+
 #cover-intro {
-  background-image: url("../images/bg-10.png");
+  background-image: url("../images/intro-cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 5px solid #F6BB3B;
+}
+
+#cover-provider {
+  background-image: url("../images/image22.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 5px solid #F6BB3B;
+}
+
+#cover-contact {
+  background-image: url("../images/image28.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
@@ -1014,6 +1056,10 @@ select option:first-child {
 }
 
 @media only screen and (max-width: 768px) { 
+
+  .advisory-btn {
+    font-size: 16px !important;
+  }
   #section0 .content .lg1 {
     width: 180px;
   }
@@ -1313,7 +1359,7 @@ select option:first-child {
   #front-content {
     margin-top: 0px;
   }
-  #cover-intro {
+  #cover-intro, #cover-support, #cover-contact, #cover-provider {
     height: 300px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
