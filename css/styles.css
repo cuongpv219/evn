@@ -801,6 +801,19 @@ button a:hover {
   height: 75px;
   font-size: 14px;
   line-height: 28px;
+  padding: 20px 40px 20px 20px;
+}
+
+#front-table tr td:first-child {
+  padding: 20px 30px 20px 50px;
+}
+#front-table tr td p {
+  white-space: break-spaces;
+  text-align: justify;
+}
+
+#front-table tr td i {
+  cursor: pointer;
 }
 
 #front-table tr:nth-child(even) {
@@ -1636,6 +1649,12 @@ select:not(:focus):invalid {
 
 .prd-active a {
   color: #fff !important;
+}
+
+.prd-table #front-table tr td:nth-child(3),
+.prd-table #front-table tr td:nth-child(4),
+.prd-table #front-table tr td:nth-child(5) {
+  text-align: center;
 }
 
 @media only screen and (min-width: 992px) {
