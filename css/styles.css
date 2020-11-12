@@ -794,6 +794,7 @@ button a:hover {
   text-transform: uppercase;
   height: 75px;
   border: 0;
+  text-align: center;
 }
 
 #front-table tr td {
@@ -1655,6 +1656,12 @@ select:not(:focus):invalid {
 .prd-table #front-table tr td:nth-child(4),
 .prd-table #front-table tr td:nth-child(5) {
   text-align: center;
+}
+
+.bold-text {
+  font-family: Lato2-Bold, "Segoe UI", Arial, sans-serif !important;
+  font-size: 16px;
+  color: #000;
 }
 
 @media only screen and (min-width: 992px) {
